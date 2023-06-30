@@ -1,0 +1,31 @@
+//- include preload.pug
+header
+	.main-grid
+		.col-2.col-xs-4.logo-container.vertical-align
+			a.logo(href="#") 
+				img(src="/images/logo.jpg", alt="")
+		.col-5.vertical-align
+			nav.nav-header
+				ul.ln
+						li 
+							a(href="#") Главная
+						li 
+							a(href="#") О компании
+								i
+							ul 
+								li 
+									a(href="#") О нас 
+								li 
+									a(href="#") Блог
+						li 
+							a(href="#") контакты
+		.col-5.col-xs-4.vertical-align.feedback-header
+			div
+				a.phone-btn(href="#") 
+					i
+					span + 971 56 115 16 24
+			div
+				a.btn-header.btn.btn--blue.element-btn(data-element="1" href="#") Перезвонить мне
+			+social(["fc","i"])
+
+
