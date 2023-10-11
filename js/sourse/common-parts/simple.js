@@ -16,12 +16,12 @@ window.addEventListener('scroll', function (e) {
 
 
 
-$(window).on('load',function(){
-  $('.preload').addClass('load');
-  setTimeout(function(){
-    $('.preload').addClass('hide');
-  },2000)
-});
+// $(window).on('load',function(){
+//   $('.preload').addClass('load');
+//   setTimeout(function(){
+//     $('.preload').addClass('hide');
+//   },2000)
+// });
 
 
 
@@ -42,18 +42,9 @@ $('.input-box').each(function(){
 
 // video play rew
 
-$('.video-btn').on('click',function(){
-  $(this).hide();
-  $(this).prev()[0].play();
-});
-
-
-
-
-
-
-
-
-
+// $('.video-btn').on('click',function(){
+//   $(this).hide();
+//   $(this).prev()[0].play();
+// });
 
 /*servises yachts add title to input popup*/

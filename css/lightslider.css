@@ -98,11 +98,7 @@
     transition: border-radius 0.12s linear 0s 0.35s linear 0s;
 }
 
-.lSSlideOuter .lSPager.lSGallery img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
+
 .lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
     content: " ";
     display: table;

@@ -1,6 +1,6 @@
 
 .lSAction
-  @include positionElement(100%,48px,0,50%)
+  @include positionElement(100%,1px,0,50%)
   transform: translateY(-50%)
 .lSPrev,
 .lSNext
@@ -10,6 +10,8 @@
   border: 1px solid $grayColor
   border-radius: 100%
   cursor: pointer
+  transform: translateY(-50%)
+  margin: 0 15px
   &:hover
     background-color: $blackColor
     border-color: $blackColor

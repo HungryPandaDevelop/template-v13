@@ -1,6 +1,26 @@
-.main-slider-item
+.default-slider,
+.thumb-slider
+  // position: relative
+
+.default-slider-item
+  height: 350px
   position: relative
-  height: 250px
   img
     @include positionElement(100%,100%,0,0)
     object-fit: cover
+.slider-light
+  .lSGallery
+    li
+      position: relative
+      height: 90px
+      position: relative
+      opacity: 0.8
+      &.active
+        opacity: 1
+    a
+      display: block
+    img
+      @include positionElement(100%,100%,0,0)
+      object-fit: cover
+.lSPager.lSpg
+  margin-bottom: 15px

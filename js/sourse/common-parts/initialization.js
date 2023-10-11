@@ -1,11 +1,12 @@
-let mainSlider = $('.main-slider');
+let defaultSlider = $('.default-slider');
 
-mainSlider.lightSlider({
+defaultSlider.lightSlider({
   item:1,
   loop:false,
   slideMove:2,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed:600,
+  addClass: 'slider-light-item',
   adaptiveHeight: true,
   responsive : [
       {
@@ -35,12 +36,9 @@ thumbSlider.lightSlider({
   thumbItem:9,
   slideMargin:0,
   enableDrag: false,
+  addClass: 'slider-light',
   currentPagerPosition:'left',
-  onSliderLoad: function(el) {
-      el.lightGallery({
-          selector: '.thumb-slider .lslide'
-      });
-  }   
+
 });  
 
 $('.input-date').each(function(){
