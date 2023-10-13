@@ -47,4 +47,17 @@ $('.input-box').each(function(){
 //   $(this).prev()[0].play();
 // });
 
-/*servises yachts add title to input popup*/
+
+/*servises*/
+
+$('.services-item').mousemove(function (event) {
+
+  let curX = (event.offsetX - 42);
+  let curY = (event.offsetY - 42);
+
+  $(this).find('.btn-item-plus').css({
+      left: (curX) + 'px',
+      top: (curY) + 'px'
+  });        
+});
+/*servises*/

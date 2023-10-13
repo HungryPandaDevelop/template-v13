@@ -11,25 +11,10 @@ defaultSlider.lightSlider({
   speed:600,
   addClass: 'slider-light-item',
   adaptiveHeight: true,
-  responsive : [
-      {
-          breakpoint:800,
-          settings: {
-              item:2,
-              slideMove:1,
-              slideMargin:6,
-            }
-      },
-      {
-          breakpoint:480,
-          settings: {
-              item:2,
-              slideMove:1
-            }
-      }
-  ]
 
 });  
+
+
 let thumbSlider = $('.thumb-slider');
 
 thumbSlider.lightSlider({
@@ -407,5 +392,18 @@ $('.input-box').each(function(){
 //   $(this).prev()[0].play();
 // });
 
-/*servises yachts add title to input popup*/
+
+/*servises*/
+
+$('.services-item').mousemove(function (event) {
+
+  let curX = (event.offsetX - 42);
+  let curY = (event.offsetY - 42);
+
+  $(this).find('.btn-item-plus').css({
+      left: (curX) + 'px',
+      top: (curY) + 'px'
+  });        
+});
+/*servises*/
 });

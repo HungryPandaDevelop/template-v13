@@ -8,25 +8,10 @@ defaultSlider.lightSlider({
   speed:600,
   addClass: 'slider-light-item',
   adaptiveHeight: true,
-  responsive : [
-      {
-          breakpoint:800,
-          settings: {
-              item:2,
-              slideMove:1,
-              slideMargin:6,
-            }
-      },
-      {
-          breakpoint:480,
-          settings: {
-              item:2,
-              slideMove:1
-            }
-      }
-  ]
 
 });  
+
+
 let thumbSlider = $('.thumb-slider');
 
 thumbSlider.lightSlider({
