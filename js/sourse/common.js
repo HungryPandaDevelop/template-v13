@@ -9,4 +9,5 @@
 // @prepros-append common-parts/btn-show-hide.js  
 // @prepros-append common-parts/password-edit.js
 // @prepros-append common-parts/simple.js
+// @prepros-append common-parts/tabs.js
 // @prepros-append common-parts/end.js

@@ -61,3 +61,10 @@ $('.services-item').mousemove(function (event) {
   });        
 });
 /*servises*/
+
+/*faq*/
+$('.faq-head').on('click',function(){
+  $(this).parent().toggleClass('faq-item--active');
+});
+/*faq*/
+

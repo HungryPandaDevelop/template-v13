@@ -14,6 +14,32 @@ defaultSlider.lightSlider({
 
 });  
 
+let partnersSlider = $('.partners-slider');
+
+partnersSlider.lightSlider({
+  item: 5,
+  loop: true,
+  slideMove:1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed:600,
+  adaptiveHeight: true,
+});  
+
+
+let multySlider = $('.multy-slider');
+
+multySlider.lightSlider({
+  item: 3,
+  loop:false,
+  slideMove:1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed:600,
+  adaptiveHeight: true,
+
+});  
+
+
+
 
 let thumbSlider = $('.thumb-slider');
 
@@ -406,4 +432,49 @@ $('.services-item').mousemove(function (event) {
   });        
 });
 /*servises*/
+
+/*faq*/
+$('.faq-head').on('click',function(){
+  $(this).parent().toggleClass('faq-item--active');
+});
+/*faq*/
+
+
+let detailTabs = $('.tabs');
+if(detailTabs.length > 0){
+  const onHoverMoveCarriage = function(num){
+    let widthCarriage = detailTabs.find('li').eq(num).width();
+    let offsestLeftCarriage = detailTabs.find('li').eq(num).position().left;
+    $('.tabs-carriage').css({width: widthCarriage+'px', left: offsestLeftCarriage+'px'});
+  }
+  let timeOutId;
+  let curretTabs = 0;
+  let timeReturn = 500;
+
+  detailTabs.find('li').hover(
+  function(){
+
+    clearInterval(timeOutId)
+    onHoverMoveCarriage($(this).index());
+
+  
+  },function(){
+
+    timeOutId = setTimeout(function(){
+      onHoverMoveCarriage(curretTabs);
+    }, timeReturn);
+  });
+
+  detailTabs.find('li').on('click',function(){
+    
+    curretTabs = $(this).index();
+    detailTabs.find('li').removeClass('active').eq(curretTabs).addClass('active');
+    onHoverMoveCarriage(curretTabs);
+
+    $('.tabs-item').removeClass('active').eq(curretTabs).addClass('active');
+  });
+
+  onHoverMoveCarriage(0);
+
+}
 });

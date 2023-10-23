@@ -1,14 +1,4 @@
-.default-slider,
-.thumb-slider
-  // position: relative
-
-.default-slider-item
-  height: 350px
-  position: relative
-  img
-    @include positionElement(100%,100%,0,0)
-    object-fit: cover
-.slider-light
+.default-slider
   .lSGallery
     li
       position: relative
@@ -22,5 +12,11 @@
     img
       @include positionElement(100%,100%,0,0)
       object-fit: cover
-.lSPager.lSpg
-  margin-bottom: 15px
+  .lSPager.lSpg
+    margin-bottom: 15px
+.default-slider-item
+  height: 350px
+  position: relative
+  img
+    @include positionElement(100%,100%,0,0)
+    object-fit: cover

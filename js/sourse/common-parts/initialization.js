@@ -11,6 +11,32 @@ defaultSlider.lightSlider({
 
 });  
 
+let partnersSlider = $('.partners-slider');
+
+partnersSlider.lightSlider({
+  item: 5,
+  loop: true,
+  slideMove:1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed:600,
+  adaptiveHeight: true,
+});  
+
+
+let multySlider = $('.multy-slider');
+
+multySlider.lightSlider({
+  item: 3,
+  loop:false,
+  slideMove:1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed:600,
+  adaptiveHeight: true,
+
+});  
+
+
+
 
 let thumbSlider = $('.thumb-slider');
 
