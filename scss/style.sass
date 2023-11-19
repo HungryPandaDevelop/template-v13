@@ -19,7 +19,7 @@
 
 @import "sourse/default/_content.sass"
 
-/*-----defat-content-end----*/
+/*-----default-content-end----*/
 
 /*-----elements-start----*/
 
@@ -65,6 +65,8 @@
 
 @import "sourse/default/forms/_dropzone.sass"
 
+@import "sourse/default/forms/_search.sass"
+
 /*-----forms-end----*/
 
 /*-----blocks-start----*/
@@ -75,7 +77,13 @@
 
 @import "sourse/blocks/_map.sass"
 
-@import "sourse/blocks/_lightSlider.sass"
+@import "sourse/blocks/slider/_lightSlider.sass"
+
+@import "sourse/blocks/slider/_slider-section.sass"
+
+@import "sourse/blocks/slider/_default-slider.sass"
+
+@import "sourse/blocks/slider/_default-slider-thumb.sass"
 
 /*-----popup-start----*/
 @import "sourse/blocks/popup/_default.sass"
@@ -88,23 +96,26 @@
 
 /*-----pages-start----*/ 
 
-/*-----default-start----*/ 
-@import "sourse/pages/default/_half-slider.sass"
-@import "sourse/pages/default/_default-slider.sass"
-@import "sourse/pages/default/_faq.sass"
-@import "sourse/pages/default/_partners.sass"
-@import "sourse/pages/default/_advantages.sass"
-@import "sourse/pages/default/_tabs.sass"
-@import "sourse/pages/default/_banner.sass"
-/*-----default-end----*/  
+/*-----detail-start----*/ 
+
+@import "sourse/pages/detail/_default.sass"
+@import "sourse/pages/detail/_tabs.sass"
+
+/*-----detail-end----*/  
 
 /*-----main-start----*/ 
-
+@import "sourse/pages/home/_main.sass"
+@import "sourse/pages/home/_banner.sass"
+@import "sourse/pages/home/_advantages.sass"
+@import "sourse/pages/home/_partners.sass"
+@import "sourse/pages/home/_about.sass"
+@import "sourse/pages/home/_faq.sass"
 /*-----main-end----*/ 
 
-/*-----blog-start----*/ 
-@import "sourse/pages/blog/_catalog.sass"
-/*-----blog-end----*/ 
+/*-----news-start----*/ 
+@import "sourse/pages/news/_catalog.sass"
+@import "sourse/pages/news/_detail.sass"
+/*-----news-end----*/  
 
 /*-----services-start----*/ 
 @import "sourse/pages/services/_catalog.sass"

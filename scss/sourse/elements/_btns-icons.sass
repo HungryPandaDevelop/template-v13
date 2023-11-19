@@ -13,54 +13,30 @@ $icoOffset: 8px
 	&:hover
 		background-image: url("../images/icons/hamburger-gray.svg")
 
-.whatsapp-btn
+@mixin icoBtn($ico, $icoHover)
 	border-color: $blackColor
 	i,span
 		display: inline-block
 		vertical-align: middle
 	i
-		@include icoEl($icoSize, $icoSize, "../images/social/whatsapp-black.svg")
 		margin-right: $icoOffset
+		@include icoEl($icoSize, $icoSize, $ico)
+	@if $icoHover
+		&:hover
+			color: $grayColor
+			i
+				background-image: url($icoHover)
 
 .phone-btn
+	@include icoBtn("../images/icons/phone-black.svg", "../images/icons/phone-gray.svg")
+.mail-btn
+	@include icoBtn("../images/icons/mail-black.svg", "../images/icons/mail-gray.svg")
+.marker-btn
+	@include icoBtn("../images/icons/marker-black.svg", "../images/icons/marker-gray.svg")
+.whatsapp-btn
+	@include icoBtn("../images/social/whatsapp-black.svg", false)
 	border-color: $blackColor
-	i,span
-		display: inline-block
-		vertical-align: middle
-	i
-		@include icoEl($icoSize, $icoSize, "../images/icons/phone-black.svg")
-		margin-right: $icoOffset
 
-.ico-in
-	border-color: $blackColor
-	i,span
-		vertical-align: middle
-		display: inline-block
-	i
-		width: $icoSize
-		height: $icoSize
-		position: relative
-	img
-		@include positionElement(100%,100%)
-
-	.back-ico
-		visibility: hidden
-	.front-ico
-
-	&.active,
-	&:hover
-		text-decoration: none
-
-		.back-ico
-			visibility: visible
-		.front-ico
-			visibility: hidden
-.ico-in--right
-	i
-		margin-left: $icoOffset
-.ico-in--left
-	i
-		margin-right: $icoOffset
 // .video-btn
 // 	cursor: pointer
 // 	span

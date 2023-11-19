@@ -4,7 +4,7 @@
 /** /!!! core css Should not edit !!!/**/ 
 
 .lSSlideOuter {
-    overflow: hidden;
+    /* overflow: hidden; */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -117,9 +117,10 @@
     padding-right: 0px !important;
 }
 .lSSlideOuter.vertical .lSGallery {
-    position: absolute !important;
+    position: absolute;
     right: 0;
     top: 0;
+    left: auto;
 }
 .lSSlideOuter.vertical .lightSlider > * {
     width: 100% !important;

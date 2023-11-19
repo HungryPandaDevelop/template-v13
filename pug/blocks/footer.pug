@@ -4,6 +4,7 @@ footer
 			a.logo(href="./index.html")
 				img(src="/images/logo.jpg", alt="")
 			.logo-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, velit? Maxime autem iure nisi pariatur quasi harum! Ipsam amet dolore animi ea illo iste molestias error qui, natus, explicabo earum!
+			
 		.col-3
 			.nav
 				h3 
@@ -13,7 +14,7 @@ footer
 						li  
 							a(href="#") 
 								= val
-
+		
 		.col-3
 			.nav.nav-second
 				ul
@@ -24,17 +25,21 @@ footer
 		.col-3.feedback
 			h3 
 				a(href="#") Наши Контакты
-			.feedback-footer-marker.feedback-footer-item
-				a(href="#") 
-					i.marker-ico
+			.feedback-footer-item
+				a.marker-btn(href="#") 
+					i
 					span Dubai Harbour Marina
-			.feedback-footer-mail.feedback-footer-item
-				a(href="#")
-					i.mail-ico
+			.feedback-footer-item
+				a.mail-btn(href="#")
+					i
 					span mail@mail.ru
-			.feedback-footer-phone.feedback-footer-item
-				a(href="#") 
-					i.phone-ico
+			.feedback-footer-item
+				a.phone-btn(href="#") 
+					i
+					span + 971 56 115 16 24
+			.feedback-footer-item
+				a.whatsapp-btn(href="#") 
+					i
 					span + 971 56 115 16 24
 			.btn-container 
 				a.btn.btn--blue.btn-element(href="#").element-btn(data-element="1")

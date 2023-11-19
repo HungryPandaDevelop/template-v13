@@ -1,9 +1,10 @@
 //- include preload.pug
 header
 	.main-grid
-		.col-2.col-xs-4.logo-container.vertical-align
+		.col-2.logo-container.vertical-align
 			a.logo(href="#") 
 				img(src="/images/logo.jpg", alt="")
+			+search(false)
 		.col-5.vertical-align
 			nav.nav-header
 				ul.ln
@@ -19,7 +20,7 @@ header
 									a(href="#") Блог
 						li 
 							a(href="#") контакты
-		.col-5.col-xs-4.vertical-align.feedback-header
+		.col-5.vertical-align.feedback-header
 			div
 				a.phone-btn(href="#") 
 					i
