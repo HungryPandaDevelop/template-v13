@@ -1,7 +1,11 @@
-.default-thumb-container
+.thumb-slider-light
   height: 350px
+  .lSSlideWrapper
+    height: calc(100% - 105px)
+.default-thumb-container
+  // height: 350px
   position: relative
-  padding-bottom: 100px
+  // padding-bottom: 100px
   ul,li
     margin: 0
     padding: 0
@@ -22,10 +26,3 @@
       &::before
       &::after
         display: none
-
-.default-slider-item
-  // height: 350px
-  position: relative
-  img
-    @include positionElement(100%,100%,0,0)
-    object-fit: cover

@@ -1,5 +1,24 @@
 include ../../default/build-header
-  include ../../blocks/header
-  .stub
-  //- +roofContent("Lorem impusm")
-  include ../detail/main.pug
+	include ../../blocks/header
+	.stub
+	//- +roofContent("Lorem impusm")
+	.main-full
+		+breadcrumbs('Link')
+		h1 Site is started
+	//- include default/advantages.pug
+		include ../detail/main.pug
+	.main-grid.news-main
+		.col-6
+			.default-thumb-container
+				.thumb-slider
+					-for (x=0; x<10;x++)
+						li.default-slider-item(data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg")
+							img(src="/images/temp/1.jpg",  alt="")
+		.col-6
+			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias sunt similique eveniet! Quos eius doloremque mollitia, id magnam error obcaecati iste sequi commodi enim rem illo. Modi, possimus itaque!
+
+	include ../detail/tabs.pug
+	include ../detail/news-last.pug
+	include ../detail/reviews.pug 
+	.stub
+	include ../../blocks/footer

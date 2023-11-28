@@ -5,10 +5,10 @@ let defaultSlider = $('.default-slider');
 defaultSlider.lightSlider({
   item:1,
   loop:false,
-  slideMove:2,
+  slideMove:1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed:600,
-  addClass: 'slider-light-item',
+  addClass: 'default-slider-light',
   adaptiveHeight: true,
 
 });  
@@ -49,7 +49,8 @@ thumbSlider.lightSlider({
   thumbItem:4,
   slideMargin:0,
   enableDrag: false,
-  currentPagerPosition:'top',
+  currentPagerPosition:'left',
+  addClass: 'thumb-slider-light',
 });  
 
 let thumbSliderVericale = $('.thumb-slider-verticale');
