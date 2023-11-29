@@ -301,7 +301,7 @@ section {
 .link {
   font-weight: 700;
   font-size: 16px;
-  color: #03ac9f;
+  color: #a3ff1d;
 }
 .link:hover {
   color: #fba72a;
@@ -363,9 +363,8 @@ section {
   font-style: normal;
 }
 .btn:hover {
-  background-color: #202020;
-  border-color: #202020;
-  color: #ffffff;
+  background-color: #fba72a;
+  border-color: #fba72a;
 }
 
 .btn--blue {
@@ -3005,7 +3004,7 @@ footer h3 a {
 }
 
 .banner {
-  background-color: #14143C;
+  background-color: #202020;
   color: #ffffff;
   padding: 75px 0;
 }
@@ -3032,10 +3031,6 @@ footer h3 a {
   margin: 0 auto;
   position: relative;
 }
-.advantages-item img {
-  width: 100px;
-  margin: 0 0 15px;
-}
 .advantages-item h3 {
   font-size: 24px;
   text-transform: initial;
@@ -3046,6 +3041,22 @@ footer h3 a {
 .advantages-item:hover .advantages-hint {
   opacity: 1;
   visibility: visible;
+}
+
+.advantages-item-img {
+  background-color: #202020;
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.advantages-item-img img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
 }
 
 .advantages-item-text {
@@ -3608,6 +3619,8 @@ footer h3 a {
   width: 36px;
   height: 36px;
   display: inline-block;
+  background-color: #202020;
+  border-radius: 100%;
 }
 .product-adv-icon span {
   display: block;
@@ -3616,28 +3629,28 @@ footer h3 a {
 .product-adv-icon-1 {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 40%;
   background-image: url("../images/temp/adv/1.svg");
 }
 
 .product-adv-icon-2 {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 40%;
   background-image: url("../images/temp/adv/2.svg");
 }
 
 .product-adv-icon-3 {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 40%;
   background-image: url("../images/temp/adv/3.svg");
 }
 
 .product-adv-icon-4 {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 40%;
   background-image: url("../images/temp/adv/4.svg");
 }
 
