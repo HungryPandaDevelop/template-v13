@@ -61,6 +61,7 @@ thumbSliderVericale.lightSlider({
   item:1,
   vertical:true,
   verticalHeight:300,
+  enableDrag: true,
   controls: false,
   // vThumbWidth:50,
   thumbItem:4,

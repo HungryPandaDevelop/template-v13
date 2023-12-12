@@ -19,6 +19,7 @@ $icoOffset: 8px
 		display: inline-block
 		vertical-align: middle
 	i
+		margin-left: $icoOffset
 		margin-right: $icoOffset
 		@include icoEl($icoSize, $icoSize, $ico)
 	@if $icoHover
@@ -37,6 +38,11 @@ $icoOffset: 8px
 	@include icoBtn("../images/social/whatsapp-black.svg", false)
 	border-color: $blackColor
 
+.prev-btn
+	@include icoBtn("../images/arrows/arrow-left-black.svg", "../images/arrows/arrow-left-gray.svg")
+
+.next-btn
+	@include icoBtn("../images/arrows/arrow-right-black.svg", "../images/arrows/arrow-right-gray.svg")
 // .video-btn
 // 	cursor: pointer
 // 	span

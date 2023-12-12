@@ -234,14 +234,12 @@ section {
 
 .breadcrumbs {
   font-size: 14px;
-  margin: 15px 0 10px;
-  padding: 0 8px;
+  padding: 8px 8px;
   color: #98A1A7;
   position: relative;
   z-index: 2;
   background-color: #ffffff;
-  border-radius: 15px;
-  display: inline-block;
+  border-bottom: 1px solid #f3f3f3;
 }
 .breadcrumbs em {
   font-size: 0;
@@ -297,6 +295,10 @@ section {
   margin: 0 8px 15px 0;
   text-decoration: none;
 }
+.tag:hover {
+  background-color: #202020;
+  color: #a3ff1d;
+}
 
 .link {
   font-weight: 700;
@@ -338,6 +340,42 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("../images/icons/marker-black.svg");
+}
+
+.date-ico {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/calendar-black.svg");
+  margin-right: 8px;
+}
+
+.view-ico {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/view-black.svg");
+  margin-right: 8px;
+}
+
+.rewiews-ico {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/rew-black.svg");
+  margin-right: 8px;
 }
 
 .btn {
@@ -453,8 +491,8 @@ section {
   color: #ffffff;
   background-color: #C19F56;
 }
-.pagination .previous a,
-.pagination .next a {
+.pagination .previous,
+.pagination .next {
   background-size: 100%;
   font-size: 0;
 }
@@ -463,7 +501,7 @@ section {
   opacity: 0;
   visibility: hidden;
 }
-.pagination .previous a {
+.pagination .previous {
   display: inline-block;
   vertical-align: middle;
   width: 30px;
@@ -473,11 +511,11 @@ section {
   background-size: contain;
   background-image: url("../images/arrows/carret-left-gray.svg");
 }
-.pagination .previous a:hover {
+.pagination .previous:hover {
   background-color: #C19F56;
   background-image: url("../images/arrows/carret-left-white.svg");
 }
-.pagination .next a {
+.pagination .next {
   display: inline-block;
   vertical-align: middle;
   width: 30px;
@@ -487,7 +525,7 @@ section {
   background-size: contain;
   background-image: url("../images/arrows/carret-right-gray.svg");
 }
-.pagination .next a:hover {
+.pagination .next:hover {
   background-color: #C19F56;
   background-image: url("../images/arrows/carret-right-white.svg");
 }
@@ -531,6 +569,7 @@ section {
   vertical-align: middle;
 }
 .phone-btn i {
+  margin-left: 8px;
   margin-right: 8px;
   display: inline-block;
   vertical-align: middle;
@@ -556,6 +595,7 @@ section {
   vertical-align: middle;
 }
 .mail-btn i {
+  margin-left: 8px;
   margin-right: 8px;
   display: inline-block;
   vertical-align: middle;
@@ -581,6 +621,7 @@ section {
   vertical-align: middle;
 }
 .marker-btn i {
+  margin-left: 8px;
   margin-right: 8px;
   display: inline-block;
   vertical-align: middle;
@@ -607,6 +648,7 @@ section {
   vertical-align: middle;
 }
 .whatsapp-btn i {
+  margin-left: 8px;
   margin-right: 8px;
   display: inline-block;
   vertical-align: middle;
@@ -616,6 +658,58 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("../images/social/whatsapp-black.svg");
+}
+
+.prev-btn {
+  border-color: #202020;
+}
+.prev-btn i, .prev-btn span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.prev-btn i {
+  margin-left: 8px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/arrows/arrow-left-black.svg");
+}
+.prev-btn:hover {
+  color: #98A1A7;
+}
+.prev-btn:hover i {
+  background-image: url("../images/arrows/arrow-left-gray.svg");
+}
+
+.next-btn {
+  border-color: #202020;
+}
+.next-btn i, .next-btn span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.next-btn i {
+  margin-left: 8px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/arrows/arrow-right-black.svg");
+}
+.next-btn:hover {
+  color: #98A1A7;
+}
+.next-btn:hover i {
+  background-image: url("../images/arrows/arrow-right-gray.svg");
 }
 
 .spinner-container {
@@ -2321,6 +2415,7 @@ header {
   top: auto;
   color: #14143C;
   background-color: #ffffff;
+  border-bottom: 1px solid #f3f3f3;
   min-width: 320px;
 }
 header a {
@@ -2812,6 +2907,29 @@ footer h3 a {
 /*-----blocks-start----*/ 
 /*-----pages-start----*/ 
 /*-----detail-start----*/ 
+.detail-roof {
+  background-color: #f3f3f3;
+  padding: 15px 0;
+  margin: 0 0 45px;
+}
+.detail-roof .main-full {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.detail-roof .next-btn {
+  margin-left: auto;
+}
+
+.detail-roof-info {
+  margin-left: 45px;
+}
+
+.detail-roof-info-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+
 .tabs {
   padding: 0;
   padding-bottom: 90px;

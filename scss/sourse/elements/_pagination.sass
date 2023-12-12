@@ -38,49 +38,22 @@
 
   .previous,
   .next
-    a
-      background-size: 100%
-      font-size: 0
+    background-size: 100%
+    font-size: 0
     &.disabled
       opacity: 0
       visibility: hidden
   .previous
-    a
-      @include icoEl(30px, 30px, "../images/arrows/carret-left-gray.svg")
+    @include icoEl(30px, 30px, "../images/arrows/carret-left-gray.svg")
 
-      &:hover
-        background-color: $goldColor
-        background-image: url("../images/arrows/carret-left-white.svg")
+    &:hover
+      background-color: $goldColor
+      background-image: url("../images/arrows/carret-left-white.svg")
 
   .next
-    a
-      @include icoEl(30px, 30px, "../images/arrows/carret-right-gray.svg")
-      &:hover
-        background-color: $goldColor
-        background-image: url("../images/arrows/carret-right-white.svg")
+    @include icoEl(30px, 30px, "../images/arrows/carret-right-gray.svg")
+    &:hover
+      background-color: $goldColor
+      background-image: url("../images/arrows/carret-right-white.svg")
 
 /*pagination page end*/
-
-// a.next.page-numbers,
-// a.prev.page-numbers,
-// a.pagination-prev,
-// a.pagination-next
-//   background-size: 100%
-//   font-size: 0
-//   background-color: $whiteColor
-//   border-color: $whiteColor
-// .pagination-dotted
-//   background-color: initial
-//   color: inherit
-// .prev.page-numbers,
-// a.pagination-prev
-//   @include icoEl(30px, 30px, "../images/arrows/carret-left-yellow.svg")
-//   &:hover
-//     background-color: $goldColor
-//     background-image: url("../images/arrows/carret-left-white.svg")
-// .next.page-numbers,
-// a.pagination-next
-//   @include icoEl(30px, 30px, "../images/arrows/carret-right-yellow.svg")
-//   &:hover
-//     background-color: $goldColor
-//     background-image: url("../images/arrows/carret-right-white.svg")
