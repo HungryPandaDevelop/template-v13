@@ -2822,6 +2822,14 @@ footer h3 a {
   z-index: 4;
   left: 0;
   top: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+.popup.show {
+  opacity: 1;
+  visibility: visible;
 }
 .popup h3, .popup h4 {
   color: inherit;
