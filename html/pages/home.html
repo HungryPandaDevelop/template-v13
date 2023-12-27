@@ -19,7 +19,7 @@
   <!-- calendar input-->
   <!-- head end-->
   <body> 
-      <div class="popup element-show" data-element="1">
+      <div class="popup element-show show" data-element="1">
         <div class="popup-overlay popup-overlay-js"></div>
         <div class="popup-container"> 
           <div class="close-btn close-btn--popup close-js"></div> 
@@ -27,21 +27,28 @@
             <h3>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h3>
             <div class="popup-hint">Оставьте заявку, и мы свяжемся с вами в ближайшее время</div>
             <div class="form">
-              <input class="input-decorate phone-mask-choise" type="text" id="phone" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
-              <label class="label-animate" for="phone">номер телефона*</label>
+              <div class="input-box">
+                <label>Ваше имя*</label>
+                <input class="input-decorate" type="text">
+              </div>
+              <div class="input-box">
+                <label>Номер телефона*</label>
+                <input class="input-decorate phone-mask-choise" type="text" id="phone" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
+              </div>
+              <div class="ion"></div>
               <div class="checkbox agreement">
                 <label>Согласен (на) на обработку <a href="#">персональных данных </a>
                   <input type="checkbox" checked><span></span>
                 </label>
               </div>
                 <div class="form-btn-container col-12">
-                  <input class="btn btn--yellow" type="submit" value="отправить">
+                  <input class="btn btn--blue" type="submit" value="отправить">
                 </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="popup element-show menu-hamburger show" data-element="0">
+      <div class="popup element-show menu-hamburger" data-element="0">
         <div class="popup-overlay popup-overlay-js"></div>
         <div class="popup-container"> 
           <div class="close-btn close-btn--popup close-js"></div>
