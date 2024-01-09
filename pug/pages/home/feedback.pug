@@ -1,0 +1,25 @@
+section.feedback-home
+	.main-grid
+		.col-5.col-md-12
+			h2 Бесплатная консультация
+			.feedback-text.
+				Свяжитесь с нами по телефону <a href="#">+971 56 115 16 24</a>, <a href="#">WhatsApp</a> или заполните эту контактную форму, и мы свяжемся с Вами в ближайшее время
+		.col-7.col-md-12.form-default
+			.main-grid
+				.input-box.col-6.col-xs-12
+					label.label-animate(for="name" ) Ваше имя
+					input(type="text" id="name"  class="input-decorate" autocomplete="off")
+					
+				.input-box.col-6.col-xs-12
+					label.label-animate Ваш телефон
+					input(type="text" id="phone-flag"  class="phone phone-main input-decorate" autocomplete="off")
+				.input-box.col-12
+					label.label-animate Ваше сообщение
+					textarea( class='input-decorate check-mail' autocomplete="off")
+					
+				.checkbox.agreement.col-12
+					label Согласен (на) на обработку 
+						a(href="#") персональных данных 
+						input(type="checkbox" checked)
+						span
+				+inputSubmit('Отправить сообщение', 'btn--blue', 'col-12')

@@ -3031,6 +3031,60 @@ footer h3 a {
   gap: 60px 30px;
 }
 
+.comments-section h3 {
+  margin-bottom: 15px;
+}
+
+.comments-item {
+  border: 1px solid #E2E2E2;
+  padding: 15px;
+  margin: 0 0 30px;
+}
+
+.comments-head {
+  border-bottom: 1px solid #E2E2E2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.comments-name {
+  font-weight: 700;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.comments-date {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.comments-grade {
+  font-weight: 700;
+}
+
+.comments-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+.comments-text {
+  width: calc(100% - 150px);
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+
 /*-----detail-end----*/  
 /*-----main-start----*/ 
 .main-home {
@@ -3235,23 +3289,10 @@ footer h3 a {
 }
 
 .partners {
-  padding: 75px 0 56px;
+  padding: 75px 0 0px;
 }
-.partners .lSSlideWrapper::before, .partners .lSSlideWrapper::after {
-  content: "";
-  width: 60px;
-  position: absolute;
-  height: 100%;
-  z-index: 1;
-  left: auto;
-  top: 0;
-  background-color: #ffffff;
-}
-.partners .lSSlideWrapper::before {
-  left: 0;
-}
-.partners .lSSlideWrapper::after {
-  right: 0;
+.partners .lSSlideWrapper {
+  padding: 0 0 60px;
 }
 .partners .lSSlideWrapper .lSAction {
   z-index: 2;
@@ -3262,11 +3303,14 @@ footer h3 a {
 }
 
 .partners-item {
+  background-color: #202020;
+  border-radius: 100%;
+  text-align: center;
   margin: 0 15px;
 }
 .partners-item img {
   width: 130px;
-  height: 110px;
+  height: 130px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -3902,6 +3946,31 @@ footer h3 a {
   color: #98A1A7;
   font-size: 14px;
   font-weight: 600;
+}
+
+/*-----reviews-end----*/ 
+/*-----reviews-start----*/ 
+.map {
+  height: 400px;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.contacts-info {
+  margin-bottom: 45px;
+}
+.contacts-info a {
+  text-decoration: none;
+}
+.contacts-info a:hover {
+  color: #C19F56;
 }
 
 /*-----reviews-end----*/ 
