@@ -15,7 +15,7 @@
 		margin-right: 0
 	input
 		margin: 0
-		@include positionElement(95%, 100%)
+		@include positionElement(30px, 100%)
 		opacity: 0
 
 		&:checked~span
@@ -42,10 +42,15 @@
 		@include positionElement(21px, 21px, 0px, 5px)
 		background-color: $blueColor
 		border-radius: 0%
-		border: 0
+		border: 1px solid $whiteColor
 		&:after
 			content: ""
 			background: none
 			@include positionElement(100%, 100%, 0%,0%)
 			@include bgImageEl("../images/icons/agree-lite-white.svg")
+
+	input
+		&:checked
+			& ~ span
+				border-color: $whiteColor
 /*-checkbox-wp-*/

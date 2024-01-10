@@ -5,10 +5,6 @@
   margin: 45px 0 45px
   position: relative
   z-index: 2
-  li
-    padding: 0
-    margin: 0
-    display: inline-block
 
   a, span
     width: 30px
@@ -25,25 +21,25 @@
     transition: ease-out 0.25s
     color: $grayColor
     cursor: pointer
-  li:hover a,
   a:hover
     color: $goldColor
     border-color: $goldColor
   span
     background-color: $goldColor
     color: $whiteColor
-  li.selected a
+  &.selected
     color: $whiteColor
     background-color: $goldColor
 
-  .previous,
+  .prev,
   .next
     background-size: 100%
     font-size: 0
+
     &.disabled
       opacity: 0
       visibility: hidden
-  .previous
+  .prev
     @include icoEl(30px, 30px, "../images/arrows/carret-left-gray.svg")
 
     &:hover

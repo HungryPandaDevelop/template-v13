@@ -27,16 +27,16 @@
     width: 60px
   i
     cursor: pointer
-    @include positionElement(48px, 48px, 0, 25px , right)
+    @include positionElement(48px, 48px, 0, 25px , right, top, 2)
     @include bgImageEl("../images/arrows/carret-down-gray.svg", 48px, center 2px)
     transform: rotate(0deg)
     border: 1px solid $grayColor
     border-radius: 100%
     transition: linear 0.25s
     &:hover
-      background-color: $goldColor
-      border-color: $goldColor
-      // background-image: url("../images/arrows/carret-down-white.svg")
+      background-color: $blueColor
+      border-color: $blueColor
+      background-image: url("../images/arrows/carret-down-white.svg")
 .faq-content
   position: relative
   overflow: hidden
@@ -50,8 +50,8 @@
   i
     background-image: url("../images/arrows/carret-down-white.svg")
     transform: rotate(90deg)
-    background-color: $goldColor
-    border-color: $goldColor
+    background-color: $blueColor
+    border-color: $blueColor
   .faq-content
     padding-top: 15px
     max-height: 200px

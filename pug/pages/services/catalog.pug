@@ -1,0 +1,21 @@
+include ../../default/build-header
+	include ../../blocks/popups
+	include ../../blocks/header
+	.stub
+	.content
+		.main-full
+			+breadcrumbs('services')
+			h1 Services
+
+		.main-grid
+			-for(var x = 0; x < 7; x++)
+				.col-3.col-md-4.col-sm-6.col-xs-12
+					+servicesItem('Гриль для готовки свежепойманной рыбы','от 850 AED/час','/images/temp/serv/3.jpg')
+
+
+		.section-stub
+	// footer start 
+		
+	include ../../blocks/footer
+
+	// footer end 
