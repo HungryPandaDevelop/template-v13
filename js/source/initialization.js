@@ -108,3 +108,31 @@ $('.input-date').each(function () {
   });
 })
 
+
+function toInput(date) {
+  $(date.input).parents('.range-slider-js').find('.from-range').val(date.from)
+  $(date.input).parents('.range-slider-js').find('.to-range').val(date.to)
+}
+
+
+$(".range-slider").each(function () {
+  let type = $(this).data('type');
+  let min = $(this).data('min');
+  let max = $(this).data('max');
+  let from = $(this).data('from');
+  let to = $(this).data('to');
+
+  $(this).ionRangeSlider({
+    type: type,
+    min: min,
+    max: max,
+    from: from,
+    to: to,
+    skin: "round",
+    drag_interval: false,
+    grid_snap: true,
+    grid_num: 10,
+    onChange: toInput,
+    // step: 100
+  });
+});

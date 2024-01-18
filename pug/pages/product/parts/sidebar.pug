@@ -1,0 +1,22 @@
+.sidebar-search
+	form.search-yachts-form(action="/html/pages/yachts/list.html") 
+		.search-main
+			+search(false)
+		.sidebar-search-item.active
+			.sidebar-search-head
+				i
+				h3 Тип судна
+			.sidebar-search-body
+				+inputRadio(['Опция 1', 'Опция 2'], 'name')  
+		.sidebar-search-item.active
+			.sidebar-search-head
+				i
+				h3 Длина 
+			.sidebar-search-body
+				+rangeSliderTwo(500, 250, 500)
+
+
+
+		.btn-container
+			a.btn.btn--blue.apply-filters(href="#") Преминить
+			a.btn.btn--black-border.reset-filters(href="/html/pages/yachts/list-tile.html") Сбросить фильтры

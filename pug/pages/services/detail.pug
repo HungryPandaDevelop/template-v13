@@ -11,44 +11,28 @@ include ../../default/build-header
 				.col-5.col-md-6.col-sm-12.services-main-info 
 					.services-main-info-container
 						.services-main-price  от 850 AED/услуга
-						h1 Разработка сайта
+						h1 Разработка сайтов и веб-сервисов
 						.services-main-text  Разработка сайтов в Дубае — лучшее место для создания уникальных и современных веб-проектов. Мы предлагаем разнообразные услуги по разработке сайтов по разумным ценам, обеспечивая клиентам из разных уголков мира инновационный и стильный онлайн-опыт.
 						.btn-container 
 							a.btn.btn--blue(href="#") Заказать услугу
-			.services-main-img
-				//- img(src="/images/temp/1.webp", alt="")
-				video(autoplay)
+			.services-main-img-container
+				video(autoplay="true" loop="true")
 					source(src="/images/serv-1.mp4")
-		
-		section.pricelist-section 
-			.main-full.head-section
-				h2 Прайс-лист
-			.main-full
-				ul.ln.pricelist-list
-					-for(var x=0; x<3; x++)
-						li 
-							h3 
-								span Наименование услуги 62 мин.
-								.question-ico
-									.question-popup
-										| Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo ipsum cupiditate laudantium, eveniet, ab laborum nisi animi esse sed asperiores quis quos, aliquid ad deserunt saepe cum! Rem, explicabo vitae.
-							.pricelist-price 800 AED
-				.btn-container 
-					a.btn.btn--blue-border.whatsapp-btn.whatsapp-btn--large
-						i
-						span Забронируйте сейчас в WhatsApp
-					.btn-hint.
-						Или воспользуйтесь <a href="#">формой</a> ниже
+				img(src="/images/temp/web.svg", alt="")
 
-		section.long-slider-section
-			.main-full.head-section
-				h2 Title h2 
-				h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, similique. Dignissimos officia enim et quos cupiditate non iusto laudantium ipsam sequi adipisci! Excepturi ea recusandae ex laudantium ipsa iure voluptatibus?
-			.main-full
-				.long-slider
-					-for(var x=0;x<10;x++)
-						.long-slider-item.img-cover
-							img(src="/images/temp/1.jpg", alt="")
+		include ../detail/pricelist
+
+		include ../detail/long-slider
+
+		.section-stub
+
+		include ../detail/stage
+
+		.section-stub
+
+		include ../detail/simple
+
+		include ../detail/video
 
 
 		.section-stub

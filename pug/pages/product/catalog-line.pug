@@ -12,10 +12,10 @@ include ../../default/build-header
 					include parts/sidebar
 			.col-9
 				include parts/sorting
-				.main-grid
+				.main-grid 
 					-for(var i=0;i<8;i++)
-						.col-4
-							+productItem("Аренда Azimut 62 Lucky Star","850 AED/час")
+						.col-12
+							+productItemLine("Аренда Azimut 62 Lucky Star","850 AED/час")
 		.main-full.btn-container-section
 			a.btn.btn--blue(href="#") Показать еще
 		.section-stub
@@ -24,7 +24,7 @@ include ../../default/build-header
 	//- include ../../blocks/feedback/feedback.pug
 
 // footer start  
-
+.section-stub
 include ../../blocks/footer.pug
 
 // footer end  

@@ -34,20 +34,18 @@ mixin inputSelect(firstText, options, className)
 	select.style-select(data-text=firstText data-class=className)
 		each val in options
 			option= val
-mixin rangeSliderOne(name, range) 
-	h3=name
-	.range-slider-container.style-range-container
-		.slider-track
-		input(type="range" class="range" min="0" max=range value="0")
-		.range-num 0
-mixin rangeSliderTwo(name, rangeMax, rangeFrom, rangeTo) 
-	h3=name
-	.range-sliders-container.style-range-container
-		.slider-track
-		input(type="range" class="slider-1" min="0" max=rangeMax value=rangeFrom name='a')
-		.range-num.range-num-1(data-name='a') 0
-		input(type="range" class="slider-2" min="0" max=rangeMax value=rangeTo name='b')
-		.range-num.range-num-2(data-name='b') 0
+mixin rangeSliderOne(rangeMax, rangeFrom, rangeTo) 
+	.style-range-container.range-slider-js
+		.hidden-input-irs
+			input(type="text" class="from-range" value=rangeFrom name='a')
+		.range-slider(data-type="single" data-min="0" data-max=rangeMax data-from=rangeFrom data-to=rangeTo)
+mixin rangeSliderTwo(rangeMax, rangeFrom, rangeTo) 
+	.style-range-container.range-slider-js
+		.hidden-input-irs
+			input(type="text" class="from-range" value=rangeFrom name='a')
+			input(type="text" class="to-range" value=rangeTo name='b')
+		.range-slider(data-type="double" data-min="0" data-max=rangeMax data-from=rangeFrom data-to=rangeTo)
+
 mixin dragdropZone(classNme, size)
 	.dragdrop-container
 		.dragdrop-zone

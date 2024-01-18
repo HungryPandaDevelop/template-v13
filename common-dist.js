@@ -111,6 +111,33 @@ $('.input-date').each(function () {
 })
 
 
+function toInput(date) {
+  $(date.input).parents('.range-slider-js').find('.from-range').val(date.from)
+  $(date.input).parents('.range-slider-js').find('.to-range').val(date.to)
+}
+
+
+$(".range-slider").each(function () {
+  let type = $(this).data('type');
+  let min = $(this).data('min');
+  let max = $(this).data('max');
+  let from = $(this).data('from');
+  let to = $(this).data('to');
+
+  $(this).ionRangeSlider({
+    type: type,
+    min: min,
+    max: max,
+    from: from,
+    to: to,
+    skin: "round",
+    drag_interval: false,
+    grid_snap: true,
+    grid_num: 10,
+    onChange: toInput,
+    // step: 100
+  });
+});
 
 
 
@@ -418,14 +445,14 @@ window.addEventListener('scroll', function (e) {
 
   st = $(this).scrollTop();
 
-  if(st > 0){
+  if (st > 0) {
     $('header').addClass('stick');
   }
-  else{
+  else {
     $('header').removeClass('stick');
   }
 
-});   
+});
 
 
 
@@ -440,26 +467,26 @@ window.addEventListener('scroll', function (e) {
 
 
 /* animate label all form */
-$('.input-box').each(function(){
-  $(this).find('input, textarea').on('keyup', function(){
+$('.input-box').each(function () {
+  $(this).find('input, textarea').on('keyup', function () {
     let lengthInput = $(this).val().length;
-    if(lengthInput > 0){
+    if (lengthInput > 0) {
       $(this).addClass('input-empty');
     }
-    else{
+    else {
       $(this).removeClass('input-empty');
     }
   })
-  
+
 });
 /* animate label all form */
 
 // video play rew
 
-// $('.video-btn').on('click',function(){
-//   $(this).hide();
-//   $(this).prev()[0].play();
-// });
+$('.video-btn').on('click', function () {
+  $(this).hide();
+  $(this).prev()[0].play();
+});
 
 
 /*servises*/
@@ -470,17 +497,23 @@ $('.services-item').mousemove(function (event) {
   let curY = (event.offsetY - 42);
 
   $(this).find('.btn-item-plus').css({
-      left: (curX) + 'px',
-      top: (curY) + 'px'
-  });        
+    left: (curX) + 'px',
+    top: (curY) + 'px'
+  });
 });
 /*servises*/
 
 /*faq*/
-$('.faq-head').on('click',function(){
+$('.faq-head').on('click', function () {
   $(this).parent().toggleClass('faq-item--active');
 });
 /*faq*/
+
+/*sidebar*/
+$('.sidebar-search-head').on('click', function () {
+  $(this).parents('.sidebar-search-item').toggleClass('active');
+});
+/*sidebar*/
 
 
 let detailTabs = $('.tabs');
