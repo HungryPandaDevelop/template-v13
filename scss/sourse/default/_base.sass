@@ -55,11 +55,10 @@ p
 		margin: auto 0
 
 .img-cover
-	position: relative
+	@include positionElement(100%, 100%, 0, 0)
 	background-size: cover
 	background-position: center
 	background-repeat: no-repeat
-	height: 100%
 	overflow: hidden
 	img
 		visibility: hidden

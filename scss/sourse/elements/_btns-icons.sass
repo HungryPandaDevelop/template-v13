@@ -50,6 +50,7 @@ $icoOffset: 8px
 	&:hover,
 	&.active
 		background-image: url("../images/icons/tile-gray.svg")
+
 .line-catalog-btn
 	@include icoEl($icoSize, $icoSize, "../images/icons/line-black.svg")
 	cursor: pointer
@@ -78,3 +79,22 @@ $icoOffset: 8px
 		i
 			width: 50px
 			height: 50px
+
+.btn-reg
+	max-width: 400px
+	width: 100%
+	border-color: $blackColor
+	padding: 9px 15px
+	i,span
+		display: inline-block
+		vertical-align: middle
+	&:hover
+		color: $whiteColor
+.google-reg-btn
+	@include icoBtn("../images/icons-app/google-color.svg", "../images/icons-app/google-color.svg")
+.vk-reg-btn
+	@include icoBtn("../images/icons-app/vk-color.svg", "../images/icons-app/vk-color.svg")
+.mail-reg-btn
+	@include icoBtn("../images/icons-app/mail-color.svg", "../images/icons-app/mail-color.svg")
+.phone-reg-btn
+	@include icoBtn("../images/icons-app/phone-color.svg", "../images/icons-app/phone-color.svg")

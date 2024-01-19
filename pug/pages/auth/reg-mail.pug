@@ -1,0 +1,33 @@
+include ../../default/build-header
+	include ../../blocks/popups
+	include ../../blocks/header
+	.stub
+	.content
+		.main-full
+			//- +breadcrumbs('Page')
+			h1 Регистрация через почту
+		
+			.form-default
+				.form
+					.input-box
+						label Email
+						+inputIcon("Mail", false, 'mail-ico')  
+					.input-box
+						label Логин
+						+inputIcon("Логин", false, 'user-ico')  
+					.input-box
+						label Пароль
+						+inputPassword("Пароль")
+					.input-box
+						.checkbox.agreement
+							label Запомнить меня
+								input(type="checkbox" checked)
+								span
+					.input-box
+						+inputSubmit('Войти', 'btn--blue', 'col-12')
+		.section-stub
+	// footer start 
+		
+	include ../../blocks/footer
+
+	// footer end 

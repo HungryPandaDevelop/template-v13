@@ -48,7 +48,13 @@ include ../default/build-header
 				label Select
 				+inputSelect('Выбрать селект', ['селект 1','селект 2','селект 3','селект 4','селект 5',])
 			.input-box
-				label dropZone
+				label DropZone
 				+dragdropZone(false, 3)
+			.input-box
+				label Password
+				+inputPassword("Пароль") 
+			.input-box
+				label Ico 
+				+inputIcon("Логин", false, 'user-ico')  
 			.input-box
 				+inputSubmit('Отправить', 'btn--blue btn-send')
