@@ -1,0 +1,71 @@
+include ../../default/build-header
+	include ../../blocks/popups
+	include ../../blocks/header
+	.stub
+	.content
+		.main-full
+			+breadcrumbs('Page')
+			h1 Аккаунт
+
+		.main-grid 
+			.col-3
+				.cabinet-info
+					.cabinet-img 
+						.img-cover
+							img(src="/images/temp/avatar-1.jpg", alt="")
+					.cabinet-name HungryPandaDev
+					.cabinet-mail bink@inbox.ru
+					.cabinet-controls
+						a.link(href="#")  Выйти
+						a.link(href="#")  Удалить Аккаунт
+				.cabinet-nav
+					ul.ln
+						li 
+							a(href="#")
+								i
+								span Профиль
+						li 
+							a.active(href="#")
+								i
+								span Записи
+						li 
+							a(href="#") 
+								i
+								span Избранное
+						li
+							a(href="#") 
+								i
+								span Чат
+
+
+			.col-9
+				.records-list
+					.btn-container
+						.btn.add-btn 
+							span Добавить
+							i
+					-for(x=0;x<=3;x++)
+						.records-line
+							.vertical-align
+								.records-img
+									.img-cover 
+										img(src="/images/temp/1.jpg", alt="")
+							.vertical-align
+								h3 Record 
+									=x
+							.vertical-align
+								.records-date 20.20.2024
+							.vertical-align
+								.records-controls
+									.btn.edit-btn
+										span Редактировать
+										i
+									.btn.delete-btn
+										span Удалить
+										i
+		.section-stub
+	// footer start 
+		
+	include ../../blocks/footer
+
+	// footer end 

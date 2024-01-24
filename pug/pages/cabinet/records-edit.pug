@@ -1,0 +1,64 @@
+include ../../default/build-header
+	include ../../blocks/popups
+	include ../../blocks/header
+	.stub
+	.content
+		.main-full
+			+breadcrumbs('Page')
+			h1 Аккаунт
+
+		.main-grid 
+			.col-3
+				.cabinet-info
+					.cabinet-img 
+						.img-cover
+							img(src="/images/temp/avatar-1.jpg", alt="")
+					.cabinet-name HungryPandaDev
+					.cabinet-mail bink@inbox.ru
+					.cabinet-controls
+						a.link(href="#")  Выйти
+						a.link(href="#")  Удалить Аккаунт
+				.cabinet-nav
+					ul.ln
+						li 
+							a.active(href="#")
+								i
+								span Профиль
+						li 
+							a(href="#")
+								i
+								span Записи
+						li 
+							a(href="#") 
+								i
+								span Избранное
+						li
+							a(href="#") 
+								i
+								span Чат
+
+
+			.col-9
+				.input-box
+					label Название записи*
+					+inputText('Имя','require')
+				.input-box
+					label Фото
+					+dragdropZone(false, 3)
+				.input-box
+					label Телефон
+					+inputPhone('Телефон', 'require')
+				.input-box
+					label Email
+					+inputEmail('Email')
+				.input-box
+					label Описание
+					+inputTextarea('Описание')
+				.input-box
+					+inputSubmit('Сохранить', 'btn--blue', 'col-12')
+		.section-stub
+	// footer start 
+		
+	include ../../blocks/footer
+
+	// footer end 

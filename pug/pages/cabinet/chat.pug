@@ -1,0 +1,94 @@
+include ../../default/build-header
+	include ../../blocks/popups
+	include ../../blocks/header
+	.stub
+	.content
+		.main-full
+			+breadcrumbs('Page')
+			h1 Аккаунт
+
+		.main-grid 
+			.col-3
+				.cabinet-info
+					.cabinet-img 
+						.img-cover
+							img(src="/images/temp/avatar-1.jpg", alt="")
+					.cabinet-name HungryPandaDev
+					.cabinet-mail bink@inbox.ru
+					.cabinet-controls
+						a.link(href="#")  Выйти
+						a.link(href="#")  Удалить Аккаунт
+				.cabinet-nav
+					ul.ln
+						li 
+							a(href="#")
+								i
+								span Профиль
+						li 
+							a(href="#")
+								i
+								span Записи
+						li 
+							a(href="#") 
+								i
+								span Избранное
+						li 
+							a.active(href="#") 
+								i
+								span Чат
+
+
+			.col-9
+				.main-grid
+					.col-3
+						.chat-list 
+							-for(let x=0;x<3;x++)
+								.chat-item
+									.vertical-align
+										.chat-img
+											.img-cover
+												img(src="/images/temp/avatar-1.jpg", alt="")
+											.chat-status.active
+									.chat-item-body.vertical-align
+										div
+											.chat-name Medved
+											.chat-date 10/10/10
+					.col-9
+						.chat-main 
+							.chat-head
+									.vertical-align
+										.chat-img
+											.img-cover
+												img(src="/images/temp/avatar-1.jpg", alt="")
+											.chat-status.active
+									.chat-item-body.vertical-align
+										div
+											.chat-name Medved
+											.chat-date 10/10/10
+							.chat-body
+								.chat-message-container
+									.chat-message
+										.chat-avatar-img.chat-img
+											.img-cover
+												img(src="/images/temp/avatar-1.jpg", alt="")
+										.chat-message-body
+											.chat-message-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+											.chat-date 10/10/10
+									.chat-message.chat-message--answer
+										.chat-message-body
+											.chat-message-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+											.chat-date 10/10/10
+										.chat-avatar-img.chat-img
+											.img-cover
+												img(src="/images/temp/avatar-1.jpg", alt="")
+							.chat-controls
+								.input-box
+									label Сообщение
+									+inputTextarea('Сообщение')
+								+inputSubmit('Отправить', 'btn--blue', 'col-12')
+		.section-stub
+	// footer start 
+		
+	include ../../blocks/footer
+
+	// footer end 

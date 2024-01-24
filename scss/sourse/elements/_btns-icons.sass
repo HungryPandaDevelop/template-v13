@@ -15,6 +15,8 @@ $icoOffset: 8px
 
 @mixin icoBtn($ico, $icoHover)
 	border-color: $blackColor
+	cursor: pointer
+	padding: 6px 15px
 	i,span
 		display: inline-block
 		vertical-align: middle
@@ -36,6 +38,18 @@ $icoOffset: 8px
 	@include icoBtn("../images/icons/marker-black.svg", "../images/icons/marker-gray.svg")
 .whatsapp-btn
 	@include icoBtn("../images/social/whatsapp-black.svg", false)
+	border-color: $blackColor
+
+.edit-btn
+	@include icoBtn("../images/icons/edit-black.svg", "../images/icons/edit-gray.svg")
+	border-color: $blackColor
+
+.delete-btn
+	@include icoBtn("../images/icons/trash-black.svg", "../images/icons/trash-gray.svg")
+	border-color: $blackColor
+
+.add-btn
+	@include icoBtn("../images/icons/plus-black.svg", "../images/icons/plus-gray.svg")
 	border-color: $blackColor
 
 .prev-btn
