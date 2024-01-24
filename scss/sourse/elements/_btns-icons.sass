@@ -7,6 +7,12 @@ $icoOffset: 8px
 	&:hover
 		background-image: url("../images/icons/close-gray.svg")
 
+.logout-btn
+	@include icoEl($icoSize, $icoSize, "../images/icons/log-out-black.svg")
+	cursor: pointer
+	&:hover
+		background-image: url("../images/icons/log-out-gray.svg")
+
 .hamburger-btn
 	@include icoEl($icoSize, $icoSize, "../images/icons/hamburger-black.svg", middle, contain, center right)
 	cursor: pointer
@@ -104,6 +110,7 @@ $icoOffset: 8px
 		vertical-align: middle
 	&:hover
 		color: $whiteColor
+
 .google-reg-btn
 	@include icoBtn("../images/icons-app/google-color.svg", "../images/icons-app/google-color.svg")
 .vk-reg-btn
