@@ -12,6 +12,11 @@ $icoOffset: 8px
 	cursor: pointer
 	&:hover
 		background-image: url("../images/icons/log-out-gray.svg")
+.login-btn
+	@include icoEl($icoSize, $icoSize, "../images/icons/log-in-black.svg")
+	cursor: pointer
+	&:hover
+		background-image: url("../images/icons/log-in-gray.svg")
 
 .hamburger-btn
 	@include icoEl($icoSize, $icoSize, "../images/icons/hamburger-black.svg", middle, contain, center right)
@@ -54,6 +59,13 @@ $icoOffset: 8px
 	@include icoBtn("../images/icons/trash-black.svg", "../images/icons/trash-gray.svg")
 	border-color: $blackColor
 
+.delete-btn--circle
+	display: inline-block
+	border: 1px solid $grayColorSecond
+	padding: 5px
+	border-radius: 100%
+	i
+		margin: 0
 .add-btn
 	@include icoBtn("../images/icons/plus-black.svg", "../images/icons/plus-gray.svg")
 	border-color: $blackColor

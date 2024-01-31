@@ -607,6 +607,21 @@ section {
   background-image: url("../images/icons/log-out-gray.svg");
 }
 
+.login-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/log-in-black.svg");
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-image: url("../images/icons/log-in-gray.svg");
+}
+
 .hamburger-btn {
   display: inline-block;
   vertical-align: middle;
@@ -785,6 +800,16 @@ section {
 }
 .delete-btn:hover i {
   background-image: url("../images/icons/trash-gray.svg");
+}
+
+.delete-btn--circle {
+  display: inline-block;
+  border: 1px solid #E2E2E2;
+  padding: 5px;
+  border-radius: 100%;
+}
+.delete-btn--circle i {
+  margin: 0;
 }
 
 .add-btn {
@@ -2913,8 +2938,14 @@ header .hamburger-btn {
   gap: 30px;
 }
 
+.user-header {
+  position: relative;
+}
+
 .admin-panel {
   width: 100px;
+  text-align: right;
+  position: relative;
 }
 .admin-panel > * {
   vertical-align: middle;
@@ -2941,6 +2972,41 @@ header .hamburger-btn {
   overflow: hidden;
   cursor: pointer;
   display: inline-block;
+}
+
+.popup-panel {
+  width: 200px;
+  position: absolute;
+  height: auto;
+  right: 0;
+  top: calc(100% + 15px);
+  background-color: #ffffff;
+  outline: 1px solid #E2E2E2;
+  padding: 2px 8px;
+}
+
+.popup-panel-card {
+  border-bottom: 1px solid #E2E2E2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+}
+.popup-panel-card h3 {
+  font-size: 16px;
+  display: inline-block;
+}
+.popup-panel-card:last-child {
+  border-bottom: 0;
+}
+.popup-panel-card a {
+  text-decoration: none;
+}
+.popup-panel-card a:hover {
+  color: #C19F56;
 }
 
 footer {
@@ -5268,9 +5334,8 @@ footer h3 a {
 .cabinet-controls {
   margin-bottom: 45px;
 }
-.cabinet-controls a {
-  display: block;
-  padding: 4px;
+.cabinet-controls .link {
+  margin-right: 30px;
 }
 
 .records-list .btn-container {

@@ -9,33 +9,7 @@ include ../../default/build-header
 
 		.main-grid 
 			.col-3
-				.cabinet-info
-					.cabinet-img 
-						.img-cover
-							img(src="/images/temp/avatar-1.jpg", alt="")
-					.cabinet-name HungryPandaDev
-					.cabinet-mail bink@inbox.ru
-					.cabinet-controls
-						a.link(href="#")  Выйти
-						a.link(href="#")  Удалить Аккаунт
-				.cabinet-nav
-					ul.ln
-						li 
-							a(href="#")
-								i
-								span Профиль
-						li 
-							a(href="#")
-								i
-								span Записи
-						li 
-							a(href="#") 
-								i
-								span Избранное
-						li 
-							a.active(href="#") 
-								i
-								span Чат
+				include parts/sidebar
 
 
 			.col-9
