@@ -18,6 +18,20 @@ $icoOffset: 8px
 	&:hover
 		background-image: url("../images/icons/log-in-gray.svg")
 
+.likes-btn
+	@include icoEl($icoSize, $icoSize, "../images/icons/like-fill-black.svg")
+	cursor: pointer
+	position: relative
+	&:hover
+		background-image: url("../images/icons/like-fill-gray.svg")
+	span
+		@include positionElement(18px,18px,-6px,-6px,right,bottom)
+		background-color: $goldColor
+		color: $whiteColor
+		font-size: $microSize
+		text-align: center
+		border-radius: 100%
+
 .hamburger-btn
 	@include icoEl($icoSize, $icoSize, "../images/icons/hamburger-black.svg", middle, contain, center right)
 	cursor: pointer

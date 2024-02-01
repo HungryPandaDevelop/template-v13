@@ -1,11 +1,11 @@
 //- include preload.pug
 header
 	.main-grid
-		.col-2.logo-container.vertical-align
+		.col-1.col-sm-6.col-xs-6.logo-container.vertical-align
 			a.logo(href="#") 
 				img(src="/images/logo.jpg", alt="")
 			
-		.col-4.vertical-align
+		.col-5.col-xxl-4.col-md-5.col-sm-6.hidden-sm.hidden-xs.vertical-align
 			nav.nav-header
 				ul.ln
 						li 
@@ -15,19 +15,24 @@ header
 								i
 							ul 
 								li 
+									a(href="#") Услуги
+								li 
 									a(href="#") О нас 
 								li 
 									a(href="#") Блог
+								li 
+									a(href="#") Отзывы
 						li 
-							a(href="#") контакты
-		.col-6.vertical-align.feedback-header
-			div
+							a(href="#") Контакты
+		.col-6.col-xxl-7.col-md-6.col-sm-6.col-xs-6.vertical-align.feedback-header
+			div.hidden-sm.hidden-xs
 				a.phone-btn(href="#") 
 					i
 					span + 971 56 115 16 24
-			div
-				a.btn-header.btn.btn--blue.element-btn(data-element="1" href="#") Перезвонить мне
-			+social(["fc","i"])
-			.user-header
+			div.hidden-xs
+				a.btn-header.btn.btn--blue.element-btn.hidden-md.hidden-sm(data-element="1" href="#") Перезвонить мне
+			+social(["fc","i"], 'hidden-lg hidden-md hidden-sm hidden-xs')
+			.user-header.hidden-xs
 				include header/admin-panel
 				include header/popup-panel
+			.hamburger-btn.element-btn.hidden-xxl.hidden-xl.hidden-lg(data-element="0" href="#")
