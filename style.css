@@ -668,7 +668,7 @@ section {
 .phone-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .phone-btn i, .phone-btn span {
   display: inline-block;
@@ -696,7 +696,7 @@ section {
 .mail-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .mail-btn i, .mail-btn span {
   display: inline-block;
@@ -724,7 +724,7 @@ section {
 .marker-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .marker-btn i, .marker-btn span {
   display: inline-block;
@@ -752,7 +752,7 @@ section {
 .whatsapp-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
   border-color: #202020;
 }
 .whatsapp-btn i, .whatsapp-btn span {
@@ -775,7 +775,7 @@ section {
 .edit-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
   border-color: #202020;
 }
 .edit-btn i, .edit-btn span {
@@ -804,7 +804,7 @@ section {
 .delete-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
   border-color: #202020;
 }
 .delete-btn i, .delete-btn span {
@@ -843,7 +843,7 @@ section {
 .add-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
   border-color: #202020;
 }
 .add-btn i, .add-btn span {
@@ -872,7 +872,7 @@ section {
 .prev-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .prev-btn i, .prev-btn span {
   display: inline-block;
@@ -900,7 +900,7 @@ section {
 .next-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .next-btn i, .next-btn span {
   display: inline-block;
@@ -1013,7 +1013,7 @@ section {
 .google-reg-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .google-reg-btn i, .google-reg-btn span {
   display: inline-block;
@@ -1041,7 +1041,7 @@ section {
 .vk-reg-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .vk-reg-btn i, .vk-reg-btn span {
   display: inline-block;
@@ -1069,7 +1069,7 @@ section {
 .mail-reg-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .mail-reg-btn i, .mail-reg-btn span {
   display: inline-block;
@@ -1097,7 +1097,7 @@ section {
 .phone-reg-btn {
   border-color: #202020;
   cursor: pointer;
-  padding: 6px 15px;
+  padding: 6px 13px;
 }
 .phone-reg-btn i, .phone-reg-btn span {
   display: inline-block;
@@ -3126,6 +3126,21 @@ footer .feedback {
   margin-right: 10px;
 }
 
+@media (max-width: 576px) {
+  footer .logo-container {
+    text-align: center;
+  }
+  footer .feedback {
+    text-align: center;
+  }
+  footer .footer-links {
+    display: block;
+    text-align: center;
+  }
+  .feedback-footer-item a {
+    margin-right: auto;
+  }
+}
 .map-home {
   height: 400px;
   position: relative;
@@ -4161,13 +4176,14 @@ footer .feedback {
 
 .advantages-item {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   position: relative;
 }
 .advantages-item h3 {
+  display: inline-block;
   font-size: 24px;
   text-transform: initial;
-  margin: 0;
+  margin: 0 15px 0 15px;
   color: #14143C;
   vertical-align: middle;
 }
@@ -4194,13 +4210,8 @@ footer .feedback {
 
 .advantages-item-text {
   position: relative;
-  padding-right: 30px;
-  margin-right: -30px;
 }
 .advantages-item-text i {
-  position: absolute;
-  right: 0;
-  bottom: 3px;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;

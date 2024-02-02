@@ -36,6 +36,21 @@ partnersSlider.lightSlider({
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   adaptiveHeight: true,
+
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        item: 3,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        item: 2,
+      }
+    }
+  ]
 });
 
 
@@ -49,6 +64,20 @@ multySlider.lightSlider({
   speed: 600,
   adaptiveHeight: true,
 
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        item: 2,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        item: 1,
+      }
+    }
+  ]
 });
 
 
