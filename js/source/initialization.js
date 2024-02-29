@@ -165,3 +165,8 @@ $(".range-slider").each(function () {
     // step: 100
   });
 });
+
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})

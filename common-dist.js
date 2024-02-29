@@ -168,6 +168,12 @@ $(".range-slider").each(function () {
   });
 });
 
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})
+
+
 
 
 var longPhone = 16;
