@@ -4,9 +4,13 @@
 		a.btn.btn--blue-border(href="#") Катера
 		a.btn.btn--blue-border(href="#") Яхты стандарт
 		a.btn.btn--blue-border(href="#") Vip яхты
+		
+			i
 	.catalog-sort 
 		b Сортировать по:
 		+inputSelect('год постройки: по уменьшению', ['селект 1','селект 2','селект 3','селект 4','селект 5',],'sort-select')
+
 	.catalog-view 
 		.tile-catalog-btn.active
 		.line-catalog-btn
+		.sidebar-btn.sidebar-show-js

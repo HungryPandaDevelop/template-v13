@@ -3,15 +3,44 @@ section.tabs
 		.tabs-nav
 			ul.ln
 				li.active Спецификация
-				li Описание
-				li Дополнительные услуги
+				li Текст
 				li Галерея
-				li Правила аренды
+				li Таблица
 			.tabs-carriage
 	.main-full
 		.tabs-container
-			.tabs-item.active test 1
-			.tabs-item test 2
-			.tabs-item test 3
-			.tabs-item test 4
-			.tabs-item test 5
+			.tabs-item.active 
+				+characteristicItem('/images/temp/adv/1.svg', 'Azimut, Италия', 'Azimut, Италия') 
+			.tabs-item
+				| Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint sapiente doloribus possimus consectetur, quisquam nobis nihil iure corrupti, mollitia dolores placeat quod tenetur, minus reiciendis saepe fugiat libero eum!
+			.tabs-item.tabs-images
+				-for(x=0;x<4;x++)
+					a.tabs-images-item(data-lightbox='tabs-img' href="/images/temp/product/1.jpg")
+						img(src="/images/temp/product/1.jpg", alt="")
+					a.tabs-images-item(data-lightbox='tabs-img' href="/images/temp/product/2.jpg")
+						img(src="/images/temp/product/2.jpg", alt="")
+					a.tabs-images-item(data-lightbox='tabs-img' href="/images/temp/product/3.jpg")
+						img(src="/images/temp/product/3.jpg", alt="")
+			.tabs-item 
+				table
+					thead 
+						tr 
+							th id
+							th width
+							th height
+							th left
+							th top 
+							th z
+							th position
+							th display
+					tbody
+						-for(x=0;x<4;x++)
+							tr 
+								td id
+								td width
+								td height
+								td left
+								td top 
+								td z
+								td position
+								td display

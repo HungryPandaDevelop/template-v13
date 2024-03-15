@@ -16,6 +16,7 @@
     border: 0
 .product-item-img--line
   position: relative
+  height: 100%
 .product-item-middle
   display: flex
   .product-item-description
@@ -23,9 +24,7 @@
 
   .product-item-adv
     margin: 0 auto
-
     width: 60%
-    max-width: 300px
 .product-item-middle-delimetr
   width: 1px
   height: 100px
@@ -41,3 +40,26 @@
   .btn-product-container
     width: 60%
     margin-left: auto
+
+@media (max-width: 1280px)
+  .product-item-price
+    font-size: $mediumSize
+@media (max-width: 820px)
+  .product-item--line
+    .product-item-adv
+      display: grid
+      grid-template-columns: repeat(2,1fr)
+    .product-adv-icons
+      width: 100%
+@media (max-width: 576px)
+  .product-item-img--line
+    position: relative
+    height: 280px
+
+  .product-item-bottom
+    display: block
+    .product-item-price
+      width: 100%
+      margin: 0 0 15px
+    .btn-product-container
+      width: 100%

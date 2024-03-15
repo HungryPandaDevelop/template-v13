@@ -1,0 +1,11 @@
+mixin characteristicItem(img, name, text)
+  .characteristic-item
+    div
+      .characteristic-item-img
+        img(src=img, alt="")
+    .characteristic-item-info
+      .characteristic-item-container
+        h3
+          =name
+        .characteristic-item-text
+          =text

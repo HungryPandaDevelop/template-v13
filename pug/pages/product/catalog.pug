@@ -7,14 +7,14 @@ include ../../default/build-header
 			+breadcrumbs('Products')
 			h1 Services
 		.main-grid
-			.col-3 
+			.col-3.col-sm-12
 				.catalog-sidebar
 					include parts/sidebar
-			.col-9
+			.col-9.col-sm-12
 				include parts/sorting
 				.main-grid
 					-for(var i=0;i<8;i++)
-						.col-4
+						.col-4.col-lg-6.col-xs-12
 							+productItem("Аренда Azimut 62 Lucky Star","850 AED/час")
 		.main-full.btn-container-section
 			a.btn.btn--blue(href="#") Показать еще

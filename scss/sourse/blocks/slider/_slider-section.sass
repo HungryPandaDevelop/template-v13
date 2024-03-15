@@ -1,4 +1,6 @@
 $offset: 82px
+.multy-slider-container
+  padding-right: 45px
 .slider-section
 
   .lSSlideWrapper
@@ -23,9 +25,11 @@ $offset: 82px
     margin: 0
   h2
     display: flex
+    align-items: center
+
     span
       display: inline-block
-      margin: auto 0
+      margin: auto
 
   .btn
     width: 270px
@@ -36,5 +40,20 @@ $offset: 82px
     margin: auto
     margin-right: 0
 
-  .stab-arrow
-    width: 140px
+  .arrow-stub
+    width: 170px
+
+@media (max-width: 820px)
+  // .slider-section
+  .head-section
+    h2
+      font-size: $largeSize
+    .lSAction
+      top: -76px
+    .btn
+      width: 200px
+@media (max-width: 576px)
+  // .slider-section
+  .head-section
+    .arrow-stub
+      display: none

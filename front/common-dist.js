@@ -36,7 +36,8 @@ partnersSlider.lightSlider({
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   adaptiveHeight: true,
-
+  slideMargin: 15,
+  addClass: 'partners-slider-container',
   responsive: [
     {
       breakpoint: 992,
@@ -48,6 +49,8 @@ partnersSlider.lightSlider({
       breakpoint: 576,
       settings: {
         item: 2,
+        controls: false,
+        pager: false
       }
     }
   ]
@@ -60,10 +63,11 @@ multySlider.lightSlider({
   item: 3,
   loop: false,
   slideMove: 1,
+  slideMargin: 15,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   adaptiveHeight: true,
-
+  addClass: 'multy-slider-container',
   responsive: [
     {
       breakpoint: 992,
@@ -73,8 +77,10 @@ multySlider.lightSlider({
     },
     {
       breakpoint: 576,
+
       settings: {
         item: 1,
+        controls: false,
       }
     }
   ]
@@ -115,13 +121,36 @@ let longSlider = $('.long-slider');
 
 longSlider.lightSlider({
 
-  item: 5,
+  // item: 5,
   loop: true,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   adaptiveHeight: true,
   addClass: 'long-slider-container',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        item: 5,
+      }
+    },
+    {
+      breakpoint: 820,
+      settings: {
+        item: 3,
+      }
+    },
+    {
+      breakpoint: 576,
+
+      settings: {
+        item: 1,
+        controls: false,
+        pager: false
+      }
+    }
+  ]
 });
 
 
@@ -551,6 +580,12 @@ $('.sidebar-search-head').on('click', function () {
 /*sidebar*/
 
 
+$('.sidebar-show-js').on('click', function () {
+  $('.catalog-sidebar').toggleClass('active');
+});
+$('.close-sidebar').on('click', function () {
+  $('.catalog-sidebar').removeClass('active');
+});
 let detailTabs = $('.tabs');
 if(detailTabs.length > 0){
   const onHoverMoveCarriage = function(num){

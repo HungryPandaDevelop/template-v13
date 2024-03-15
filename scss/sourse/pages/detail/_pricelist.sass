@@ -63,3 +63,13 @@
     @include positionElement(20px,20px, 0, -9px, right, bottom)
     transform: translateX(-50%) rotate(45deg)
     background-color: $grayColorSecond
+
+@media (max-width: 576px)
+  .question-popup
+    min-width: 300px
+    width: 90vw
+    padding: 8px
+    transform: translateX(50%)
+    &::after
+      right: 50%
+      transform: translateX(-25%) rotate(45deg)

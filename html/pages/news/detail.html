@@ -8,14 +8,14 @@
     <link href="/css/lightslider.css" type="text/css" rel="stylesheet">
     <link href="/css/lightbox.css" type="text/css" rel="stylesheet">
     <link href="/css/air-datepicker.css" type="text/css" rel="stylesheet">
-    <link href="/style.css" type="text/css" rel="stylesheet">
+    <link href="/front/theme-style.css" type="text/css" rel="stylesheet">
     <script src="/js/jquery-3.6.0.min.js" defer></script>
     <script src="/js/air-datepicker.js" defer></script>
     <script src="/js/ion.rangeSlider.js" defer></script>
     <script src="/js/jquery.mask.js" defer></script>
     <script src="/js/lightslider.js" defer></script>
     <script src="/js/lightbox.js" defer></script>
-    <script src="/common-dist.js" defer> </script>
+    <script src="/front/common-dist.js" defer> </script>
   </head>
   <!-- range slider-->
   <!-- calendar input-->
@@ -81,7 +81,7 @@
         <h1>Site is started 2 2</h1>
       </div>
       <div class="detail-roof">
-        <div class="main-full"><a class="prev-btn" href="#"><i> </i><span>Вернуться</span></a>
+        <div class="main-full"><a class="prev-btn" href="#"><i> </i><span>Назад</span></a>
           <div class="detail-roof-info">
             <div class="detail-roof-info-item"><i class="date-ico"></i><span>10/10/2024</span></div>
             <div class="detail-roof-info-item"> <i class="rewiews-ico"></i><span>10</span></div>
@@ -90,12 +90,16 @@
         </div>
       </div>
       <div class="main-grid news-main">
-        <div class="col-6">
+        <div class="col-6 col-xs-12">
           <div class="thumb-container">
-            <div class="thumb-slider"><a class="default-slider-item" data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg" href="/images/temp/1.jpg" data-lightbox="product"><img src="/images/temp/1.jpg" alt=""></a><a class="default-slider-item" data-thumb="/images/temp/2.jpg" data-src="/images/temp/2.jpg" href="/images/temp/2.jpg" data-lightbox="product"><img src="/images/temp/2.jpg" alt=""></a><a class="default-slider-item" data-thumb="/images/temp/3.jpg" data-src="/images/temp/3.jpg" href="/images/temp/3.jpg" data-lightbox="product"><img src="/images/temp/3.jpg" alt=""></a><a class="default-slider-item" data-thumb="/images/temp/4.jpg" data-src="/images/temp/4.jpg" href="/images/temp/4.jpg" data-lightbox="product"><img src="/images/temp/4.jpg" alt=""></a></div>
+            <div class="thumb-slider"><a class="thumb-slider-item" data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg" href="/images/temp/1.jpg" data-lightbox="product">
+                <div class="img-cover"><img src="/images/temp/1.jpg" alt=""></div></a><a class="thumb-slider-item" data-thumb="/images/temp/2.jpg" data-src="/images/temp/2.jpg" href="/images/temp/2.jpg" data-lightbox="product">
+                <div class="img-cover"><img src="/images/temp/2.jpg" alt=""></div></a><a class="thumb-slider-item" data-thumb="/images/temp/3.jpg" data-src="/images/temp/3.jpg" href="/images/temp/3.jpg" data-lightbox="product">
+                <div class="img-cover"><img src="/images/temp/3.jpg" alt=""></div></a><a class="thumb-slider-item" data-thumb="/images/temp/4.jpg" data-src="/images/temp/4.jpg" href="/images/temp/4.jpg" data-lightbox="product">
+                <div class="img-cover"><img src="/images/temp/4.jpg" alt=""></div></a></div>
           </div>
         </div>
-        <div class="col-6"> 
+        <div class="col-6 col-xs-12">
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias sunt similique eveniet! Quos eius doloremque mollitia, id magnam error obcaecati iste sequi commodi enim rem illo. Modi, possimus itaque!</p>
           <div class="detail-links">
             <div class="tags"><a class="tag" href="#">News </a><a class="tag" href="#">Last </a><a class="tag" href="#">Custom </a></div>
@@ -111,21 +115,91 @@
           <div class="tabs-nav">
             <ul class="ln">
               <li class="active">Спецификация</li>
-              <li>Описание</li>
-              <li>Дополнительные услуги</li>
+              <li>Текст</li>
               <li>Галерея</li>
-              <li>Правила аренды</li>
+              <li>Таблица</li>
             </ul>
             <div class="tabs-carriage"></div>
           </div>
         </div>
         <div class="main-full">
           <div class="tabs-container">
-            <div class="tabs-item active">test 1</div>
-            <div class="tabs-item">test 2</div>
-            <div class="tabs-item">test 3</div>
-            <div class="tabs-item">test 4</div>
-            <div class="tabs-item">test 5</div>
+            <div class="tabs-item active"> 
+                <div class="characteristic-item">
+                  <div>
+                    <div class="characteristic-item-img"><img src="/images/temp/adv/1.svg" alt=""></div>
+                  </div>
+                  <div class="characteristic-item-info">
+                    <div class="characteristic-item-container">
+                      <h3>Azimut, Италия
+                      </h3>
+                      <div class="characteristic-item-text">Azimut, Италия
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tabs-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint sapiente doloribus possimus consectetur, quisquam nobis nihil iure corrupti, mollitia dolores placeat quod tenetur, minus reiciendis saepe fugiat libero eum!</div>
+            <div class="tabs-item tabs-images"><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/1.jpg"><img src="/images/temp/product/1.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/2.jpg"><img src="/images/temp/product/2.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/3.jpg"><img src="/images/temp/product/3.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/1.jpg"><img src="/images/temp/product/1.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/2.jpg"><img src="/images/temp/product/2.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/3.jpg"><img src="/images/temp/product/3.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/1.jpg"><img src="/images/temp/product/1.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/2.jpg"><img src="/images/temp/product/2.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/3.jpg"><img src="/images/temp/product/3.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/1.jpg"><img src="/images/temp/product/1.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/2.jpg"><img src="/images/temp/product/2.jpg" alt=""></a><a class="tabs-images-item" data-lightbox="tabs-img" href="/images/temp/product/3.jpg"><img src="/images/temp/product/3.jpg" alt=""></a>
+            </div>
+            <div class="tabs-item"> 
+              <table>
+                <thead> 
+                  <tr> 
+                    <th>id</th>
+                    <th>width</th>
+                    <th>height</th>
+                    <th>left</th>
+                    <th>top </th>
+                    <th>z</th>
+                    <th>position</th>
+                    <th>display</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr> 
+                    <td>id</td>
+                    <td>width</td>
+                    <td>height</td>
+                    <td>left</td>
+                    <td>top </td>
+                    <td>z</td>
+                    <td>position</td>
+                    <td>display</td>
+                  </tr>
+                  <tr> 
+                    <td>id</td>
+                    <td>width</td>
+                    <td>height</td>
+                    <td>left</td>
+                    <td>top </td>
+                    <td>z</td>
+                    <td>position</td>
+                    <td>display</td>
+                  </tr>
+                  <tr> 
+                    <td>id</td>
+                    <td>width</td>
+                    <td>height</td>
+                    <td>left</td>
+                    <td>top </td>
+                    <td>z</td>
+                    <td>position</td>
+                    <td>display</td>
+                  </tr>
+                  <tr> 
+                    <td>id</td>
+                    <td>width</td>
+                    <td>height</td>
+                    <td>left</td>
+                    <td>top </td>
+                    <td>z</td>
+                    <td>position</td>
+                    <td>display</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -134,7 +208,7 @@
           <div class="head-section slider-section-head">
             <h2 class="title-section">Другие статьи</h2>
             <div class="btn-container"> <a class="btn btn--blue" href="#">СМОТРЕТЬ ВСЕ</a></div>
-            <div class="stab-arrow"></div>
+            <div class="arrow-stub"></div>
           </div>
         </div>
         <div class="main-full">
@@ -211,7 +285,7 @@
             <h2 class="title-section">
                Впечатления и отзывы</h2>
             <div class="btn-container"><a class="btn btn--blue" href="#">Смотреть все статьи </a></div>
-            <div class="stab-arrow"></div>
+            <div class="arrow-stub"></div>
           </div>
         </div>
         <div class="main-full">
@@ -280,7 +354,7 @@
           <h2>Комментарии</h2>
         </div>
         <div class="main-grid">
-          <div class="col-6">
+          <div class="col-6 col-xs-12">
             <h3>Спискок комментариев</h3>
               <div class="comments-item">
                 <div class="comments-head">
@@ -311,8 +385,29 @@
                 </div>
               </div>
           </div>
-          <div class="col-6">
-            <h3>Оставьте свой отызыы</h3>
+          <div class="col-6 col-xs-12">
+            <div class="comments-form-head">
+              <h3>Оставьте свой отзыв</h3>
+              <div class="comments-stars">
+                <div class="stars-ico active"></div>
+                <div class="stars-ico active"></div>
+                <div class="stars-ico"></div>
+                <div class="stars-ico"></div>
+                <div class="stars-ico"></div>
+              </div>
+            </div>
+            <div class="comments-form">
+              <form>
+                <div class="input-box">
+                    <textarea class="input-decorate undefined" placeholder="Ваше сообщение"></textarea>
+                </div>
+                <div class="input-box">
+                    <div class="form-btn-container">
+                      <input class="btn btn--orange" type="submit" value="Оставить отзыв">
+                    </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>

@@ -74,3 +74,10 @@ $('.sidebar-search-head').on('click', function () {
 });
 /*sidebar*/
 
+
+$('.sidebar-show-js').on('click', function () {
+  $('.catalog-sidebar').toggleClass('active');
+});
+$('.close-sidebar').on('click', function () {
+  $('.catalog-sidebar').removeClass('active');
+});

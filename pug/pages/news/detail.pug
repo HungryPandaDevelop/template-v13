@@ -9,18 +9,22 @@ include ../../default/build-header
 		include ../detail/roof.pug
 	
 		.main-grid.news-main
-			.col-6
+			.col-6.col-xs-12
 				.thumb-container
 					.thumb-slider
-						a.default-slider-item(data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg" href="/images/temp/1.jpg"  data-lightbox='product')
-							img(src="/images/temp/1.jpg",  alt="")
-						a.default-slider-item(data-thumb="/images/temp/2.jpg" data-src="/images/temp/2.jpg" href="/images/temp/2.jpg"  data-lightbox='product')
-							img(src="/images/temp/2.jpg", alt="")
-						a.default-slider-item(data-thumb="/images/temp/3.jpg" data-src="/images/temp/3.jpg" href="/images/temp/3.jpg"  data-lightbox='product')
-							img(src="/images/temp/3.jpg", alt="")
-						a.default-slider-item(data-thumb="/images/temp/4.jpg" data-src="/images/temp/4.jpg" href="/images/temp/4.jpg"  data-lightbox='product')
-							img(src="/images/temp/4.jpg", alt="")
-			.col-6 
+						a.thumb-slider-item(data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg" href="/images/temp/1.jpg"  data-lightbox='product')
+							.img-cover
+								img(src="/images/temp/1.jpg", alt="")
+						a.thumb-slider-item(data-thumb="/images/temp/2.jpg" data-src="/images/temp/2.jpg" href="/images/temp/2.jpg"  data-lightbox='product')
+							.img-cover
+								img(src="/images/temp/2.jpg", alt="")
+						a.thumb-slider-item(data-thumb="/images/temp/3.jpg" data-src="/images/temp/3.jpg" href="/images/temp/3.jpg"  data-lightbox='product')
+							.img-cover
+								img(src="/images/temp/3.jpg", alt="")
+						a.thumb-slider-item(data-thumb="/images/temp/4.jpg" data-src="/images/temp/4.jpg" href="/images/temp/4.jpg"  data-lightbox='product')
+							.img-cover
+								img(src="/images/temp/4.jpg", alt="")
+			.col-6.col-xs-12
 				p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias sunt similique eveniet! Quos eius doloremque mollitia, id magnam error obcaecati iste sequi commodi enim rem illo. Modi, possimus itaque!
 				.detail-links
 					.tags

@@ -1,5 +1,5 @@
 .thumb-slider-container
-  height: 350px
+  height: 500px
 
   .lSSlideWrapper
     height: calc(100% - 105px)
@@ -28,3 +28,14 @@
       &::before
       &::after
         display: none
+.thumb-slider-item
+  position: relative
+@media (max-width: 576px)
+  .thumb-slider-container
+    height: 360px
+    .lSSlideWrapper
+      height: calc(100% - 85px)
+  .thumb-container
+    .lSGallery
+      a
+        height: 80px

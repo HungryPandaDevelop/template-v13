@@ -1,20 +1,9 @@
-mixin characteristicItem(img, name, text)
-  .characteristic-item
-    div
-      .characteristic-item-img
-        img(src=img, alt="")
-    .characteristic-item-info
-      .characteristic-item-container
-        h3
-          =name
-        .characteristic-item-text
-          =text
 .main-grid
-  .col-3
+  .col-3.col-xs-12
     +characteristicItem('/images/temp/adv/1.svg', 'Azimut, Италия', 'Azimut, Италия')
-  .col-3
+  .col-3.col-xs-12
     +characteristicItem('/images/temp/adv/2.svg', 'Azimut, Италия', 'Azimut, Италия')
-  .col-3
+  .col-3.col-xs-12
     +characteristicItem('/images/temp/adv/3.svg', 'Azimut, Италия', 'Azimut, Италия')
-  .col-3
+  .col-3.col-xs-12
     +characteristicItem('/images/temp/adv/4.svg', 'Azimut, Италия', 'Azimut, Италия')

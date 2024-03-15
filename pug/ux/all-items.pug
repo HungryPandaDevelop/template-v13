@@ -9,16 +9,25 @@ html
 	.main-full
 		h2 news, reviews, services, product, product-line
 	section
+		+blogItem('Кейтеринг', 'Неважно, новичок вы или опытный любитель', '12/12/12')
 		.main-grid 
 			.col-4
-				+reviewsItem('Wake dubai', 'Неважно, новичок вы или опытный любитель водных видов спорта, присоединяйтесь к нам и получите удовольствие от вейкбординга и вейксерфинга на наших новейших спортивных катерах Nautique, Centurion!', '16.09.1986')
+				+advantagesItem('Собственный флот','/images/temp/adv/1.svg')
+			.col-4
+				+characteristicItem('/images/temp/adv/1.svg', 'Azimut, Италия', 'Azimut, Италия') 
+			.col-4
+				+commentsItem('Wake dubai') 
 			.col-4 
 				+newsItem('Wake dubai', 'Неважно, новичок вы или опытный любитель водных видов спорта, присоединяйтесь к нам и получите удовольствие от вейкбординга и вейксерфинга на наших новейших спортивных катерах Nautique, Centurion!', '16.09.1986')
-			.col-4
-				+servicesItem('Кейтеринг на яхте','от 850 AED/час','/images/temp/serv/1.jpg')
 			.col-4
 				+productItem("Аренда Azimut 62 Lucky Star","850 AED/час")
 			.col-8
 				+productItemLine("Аренда Azimut 62 Lucky Star","850 AED/час")
 			.col-4
-				+advantagesItem('Собственный флот','/images/temp/adv/1.svg')
+				+reviewsItem('Wake dubai', 'Неважно, новичок вы или опытный любитель водных видов спорта, присоединяйтесь к нам и получите удовольствие от вейкбординга и вейксерфинга на наших новейших спортивных катерах Nautique, Centurion!', '16.09.1986')
+			.col-4
+				+servicesItem('Кейтеринг на яхте','от 850 AED/час','/images/temp/serv/1.jpg')
+
+
+
+

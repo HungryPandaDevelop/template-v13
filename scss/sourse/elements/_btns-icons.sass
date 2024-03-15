@@ -84,6 +84,12 @@ $icoOffset: 8px
 	@include icoBtn("../images/icons/plus-black.svg", "../images/icons/plus-gray.svg")
 	border-color: $blackColor
 
+.sidebar-btn
+	@include icoEl($icoSize, $icoSize, "../images/icons/sidebar-black.svg")
+	cursor: pointer
+	&:hover
+		background-image: url("../images/icons/sidebar-gray.svg")
+
 .prev-btn
 	@include icoBtn("../images/arrows/arrow-left-black.svg", "../images/arrows/arrow-left-gray.svg")
 

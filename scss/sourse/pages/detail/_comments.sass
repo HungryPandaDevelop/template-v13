@@ -33,3 +33,15 @@
   display: inline-block
   vertical-align: top
   font-size: $smallSize
+
+.comments-form-head
+  display: flex
+  justify-content: space-between
+.comments-stars
+  text-align: right
+.stars-ico
+  @include icoEl(20px, 20px, "../images/icons/star-black.svg")
+  cursor: pointer
+  &:hover,
+  &.active
+    background-image: url("../images/icons/star-fill-black.svg")

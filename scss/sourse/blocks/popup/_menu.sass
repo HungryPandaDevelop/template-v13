@@ -36,6 +36,11 @@
 			background-color: $grayColorSecond
 			font-size: $smallSize
 			display: none
+			padding: 8px 0
+			li
+				padding: 4px 15px
+				margin: 0
+
 		li
 			margin-bottom: 4px
 			border-top: 0
@@ -44,6 +49,11 @@
 			&:last-child
 				margin: 0
 				border: 0
+		&:hover
+			ul
+				display: block
+			i
+				transform: rotate(90deg)
 	a
 		color: $blueColor
 		text-decoration: none
@@ -53,6 +63,7 @@
 	text-align: center
 .menu-footer-item--feedback
 	margin: 15px 0
+
 @media (max-width: 576px)
 	.menu-hamburger
 		.popup-container
