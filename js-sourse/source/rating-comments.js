@@ -1,9 +1,12 @@
+let commetsStarBlock = $('.comments-stars');
 
-$('.reviews-stars').on('click','i',function(){
-  console.log('cl',$(this).index());
-  $(this).parent().addClass('selected');
-  $('.reviews-stars i').removeClass('active');
-  let numRating = ($(this).index()+1);
-  $(this).addClass('active');
-  $('.com_block_star #rating-'+numRating).addClass('choise').prop('checked', true);
+commetsStarBlock.on('click', '.stars-ico', function () {
+  // console.log('cl', $(this).index());
+
+  commetsStarBlock.find('.stars-ico').removeClass('active');
+  let numRating = $(this).data('index');
+
+  commetsStarBlock.find('.stars-ico').slice(0, numRating).addClass('active');
+  console.log(numRating, commetsStarBlock.find('.stars-ico').slice(0, numRating))
+  $(this).find('input').prop('checked', true);
 }); 

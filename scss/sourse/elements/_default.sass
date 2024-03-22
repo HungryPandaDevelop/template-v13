@@ -41,3 +41,19 @@
 
 .user-ico
   @include icoEl(20px, 16px, '../images/icons/avatar-black.svg', text-top)
+
+@keyframes dotMove
+  0%
+    opacity: 0
+
+  30%
+    transform: translateY(0px)
+    opacity: 1
+
+  50%
+    transform: translateY(10px)
+    opacity: 0
+
+  100%
+    opacity: 0
+    transform: translateY(0px)

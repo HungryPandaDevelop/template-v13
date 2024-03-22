@@ -6,15 +6,22 @@ section.comments-section
       h3 Спискок комментариев
       +commentsItem('ALex')
       +commentsItem('Dave')
+      .comments-navigation
+        .prev-btn
+          i 
+          span Предыдущие комментарии
+        .next-btn
+          i 
+          span Следущие комментарии
     .col-6.col-xs-12
       .comments-form-head
         h3 Оставьте свой отзыв
         .comments-stars
-          .stars-ico.active
-          .stars-ico.active
-          .stars-ico
-          .stars-ico
-          .stars-ico
+          .stars-ico.active(data-index="1")
+          .stars-ico.active(data-index="2")
+          .stars-ico(data-index="3")
+          .stars-ico(data-index="4")
+          .stars-ico(data-index="5")
       .comments-form
         form
           .input-box

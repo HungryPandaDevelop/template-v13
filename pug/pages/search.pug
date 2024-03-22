@@ -1,21 +1,27 @@
-include ../../default/build-header
-	include ../../blocks/popups
-	include ../../blocks/header
+include ../default/build-header
+	include ../blocks/popups
+	include ../blocks/header
 	.stub
 	.content
 		.main-full
-			+breadcrumbs('news')
-			h1 News
-
-		.main-grid
-			-for(var x = 0; x < 7; x++)
-				.col-3.col-md-4.col-sm-6.col-xs-12
-					+newsItem("Добавьте пленительного шарма вашему празднику","Профессиональный танец живота неизменно удивляет, очаровывает и погружает в атмосферу восточной сказки. Отныне и у наших гостей появилась…","10 октября 2022")
-		.main-full 
-			+pagination()
+			+breadcrumbs('Page')
+			h1 Page
+		.main-full
+			.search-form-container
+				form.search-form
+					+search()
+					submit.btn.btn--orange Поиск
+				.search-form-hint 
+					span Совпадение по запросу: 
+					b Нов
+					//- span По вашему запросу нету совпадений
+		.main-full
+			+searchItem()
+			+searchItem()
+			+searchItem()
 		.section-stub
 	// footer start 
 		
-	include ../../blocks/footer
+	include ../blocks/footer
 
 	// footer end 

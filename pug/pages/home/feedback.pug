@@ -7,19 +7,15 @@ section.feedback-home
 		.col-7.col-md-12.form-default
 			.main-grid
 				.input-box.col-6.col-xs-12
-					label.label-animate(for="name" ) Ваше имя
-					input(type="text" id="name"  class="input-decorate" autocomplete="off")
-					
+					label Ваше имя 
+					+inputText('Text','require')
 				.input-box.col-6.col-xs-12
-					label.label-animate Ваш телефон
-					input(type="text" id="phone-flag"  class="phone phone-main input-decorate" autocomplete="off")
+					label Ваш телефон
+					+inputPhone('Phone', 'require')
 				.input-box.col-12
-					label.label-animate Ваше сообщение
-					textarea( class='input-decorate check-mail' autocomplete="off")
-					
-				.checkbox.agreement.col-12
-					label Согласен (на) на обработку 
-						a(href="#") персональных данных 
-						input(type="checkbox" checked)
-						span
-				+inputSubmit('Отправить сообщение', 'btn--orange', 'col-12')
+					label Ваше сообщение
+					+inputTextarea('Message')
+				.input-box.col-12
+					+agreement()
+				.input-box.col-12
+					+inputSubmit('Отправить сообщение', 'btn--orange', 'col-12')

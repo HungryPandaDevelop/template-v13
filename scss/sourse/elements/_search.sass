@@ -7,11 +7,7 @@
 .search
   // width: 300px
   position: relative
-  a
-    @include icoEl(20px, 20px, '../images/icons/loop-black.svg')
-    &:hover
-      background-image: url('../images/icons/loop-gray.svg')
-  a,
+  .search-loop,
   i
     margin: 12px 13px
     position: absolute
@@ -20,10 +16,18 @@
   i
     display: none
   &.search-on
-    a
+    .search-loop
       display: none
     i
       display: block
+  .spinner
+    display: none
+    &.active
+      display: block
+.search-loop
+  @include icoEl(20px, 20px, '../images/icons/loop-black.svg')
+  &:hover
+    background-image: url('../images/icons/loop-gray.svg')
 
 .search-input
   font-size: $smallSize
@@ -42,13 +46,17 @@
     font-weight: 500
 
 .search-list
-  @include positionElement(420px, auto,0,calc(100% + 12px),left,top,3)
+  @include positionElement(100%, auto,0,calc(100% + 12px),left,top,3)
   background-color: $whiteColor
   padding: 30px 20px 15px
   border: 1px solid $grayColor
   transition: ease-out 0.5s
   opacity: 0
   visibility: hidden
+  a
+    text-decoration: none
+    &:hover
+      color: $goldColor
   &.active
     opacity: 1
     visibility: visible

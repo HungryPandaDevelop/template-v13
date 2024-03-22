@@ -5,13 +5,11 @@
 		.form
 			.input-box
 				label Ваше имя*
-				input.input-decorate(type="text")
+				+inputText('Text','require')
 			.input-box
 				label Номер телефона*
-				input.input-decorate.phone-mask-choise(type="text" id="phone" onkeypress='return event.charCode >= 48 && event.charCode <= 57')
-			.checkbox.agreement
-				label Согласен (на) на обработку 
-					a(href="#") персональных данных 
-					input(type="checkbox" checked)
-					span
-			+inputSubmit('отправить', 'btn--blue', 'col-12')
+				+inputPhone('Phone', 'require')
+			.input-box
+				+agreement()
+			.input-box
+				+inputSubmit('отправить', 'btn--blue', 'col-12')

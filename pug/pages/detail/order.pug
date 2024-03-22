@@ -1,29 +1,22 @@
-section.feedback-home.feedback-origin
+section.feedback-home
 	.main-grid
 		.col-12
 			h2 Заказать
 		.col-12.form-default
 			.main-grid
 				.input-box.col-6.col-xs-12 
-					label.label-animate(for="name" ) Ваше имя  
-					input(type="text" id="name"  class='input-decorate' autocomplete="off")
-					
+					label Ваше имя*
+					+inputText('Text','require')
 				.input-box.col-6.col-xs-12
-					label.label-animate Ваш телефон
-					input(type="text"   class="phone-mask input-decorate" autocomplete="off")
-	
+					label Номер телефона*
+					+inputPhone('Phone', 'require')
 				.input-box.col-6.col-xs-12  
-					label.label-animate(for="WhatsApp" ) WhatsApp (если отличается от номера телефона)
-					input(type="text" id="WhatsApp"  class='input-decorate' autocomplete="off")
-					
+					label Номер WhatsApp
+					+inputText('WhatsApp')
 				.input-box.date-input-container.col-6.col-xs-12  
-					label.label-animate(for="date" ) Дата и время
-					input(type="text"  class='input-decorate input-date'  autocomplete="off")
-					
-				.checkbox.agreement.col-12
-					label Согласен (на) на обработку 
-						a(href="#") персональных данных 
-						input(type="checkbox" checked)
-						span
-
-				+inputSubmit('забронировать услугу', 'btn--yellow', 'col-12') 
+					label(for="date" ) Дата и время
+					+inputDate()
+				.input-box.col-12
+					+agreement()
+				.input-box.col-12
+					+inputSubmit('забронировать услугу', 'btn--yellow', 'col-12') 

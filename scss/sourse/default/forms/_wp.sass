@@ -2,16 +2,19 @@
 .wpcf7-form-control-wrap
 	position: relative
 	text-align: left
-
-.wpcf7-list-item
-	margin: 0
-
+.wpcf7-radio,
 .wpcf7-checkbox,
 .wpcf7-acceptance
-	padding-left: 30px
+	// padding-left: 30px
 	position: relative
 	display: block
 	font-size: $standartSize
+	.wpcf7-list-item
+		display: inline-block
+		margin: 0
+		margin-right: 15px
+		position: relative
+		padding-left: 30px
 	label
 
 	input
@@ -20,7 +23,7 @@
 
 	.wpcf7-list-item-label
 		&:before
-			@include positionElement(20px, 20px, 0px, 5px)
+			@include positionElement(20px, 20px, 0px, 2px)
 			border: 1px solid $grayColor
 			background-color: $whiteColor
 			border-radius: 100%
@@ -28,19 +31,28 @@
 		&:after
 			content: ""
 			background: none
-			@include positionElement(16px, 16px, 3px, 8px)
-			background-color: $redColor
+			@include positionElement(16px, 16px, 3px, 5px)
+			background-color: $blueColor
 			border-radius: 100%
 			display: none
 	input
 		&:checked~.wpcf7-list-item-label
-			background-color: $whiteColor
-			border-color: $blackColor
 			&:after
 				display: block
 
+.wpcf7-acceptance
+	.wpcf7-list-item-label
+		// @include positionElement(21px, 21px, 0px, 5px)
+		&:before
+			background-color: $blueColor
+			border-radius: 0%
+		// border: 1px solid $whiteColor
+		&:after
+			background: none
+			@include bgImageEl("../images/icons/agree-lite-white.svg")
+
 .wpcf7-spinner
-	background-color: #03ac9f
+	background-color: $blueColor
 	position: absolute
 	top: 50%
 	left: 50%
@@ -65,10 +77,10 @@
 /*.wpcf7-form*/
 
 /*wp comments*/
-
-.logged-in-as
-	a
-		margin-right: 15px
-.com_block_star
+.comment-reply-title
+	display: none
+.comment-form-cookies-consent
+	display: none
+.comment-notes
 	display: none
 /*wp comments*/

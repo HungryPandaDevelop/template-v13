@@ -6,18 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/ion.rangeSlider.css" type="text/css" rel="stylesheet">
     <link href="/css/lightslider.css" type="text/css" rel="stylesheet">
+    <link href="/css/lightbox.css" type="text/css" rel="stylesheet">
     <link href="/css/air-datepicker.css" type="text/css" rel="stylesheet">
-    <link href="/style.css" type="text/css" rel="stylesheet">
+    <link href="/front/theme-style.css" type="text/css" rel="stylesheet">
     <script src="/js/jquery-3.6.0.min.js" defer></script>
     <script src="/js/air-datepicker.js" defer></script>
     <script src="/js/ion.rangeSlider.js" defer></script>
     <script src="/js/jquery.mask.js" defer></script>
     <script src="/js/lightslider.js" defer></script>
-    <script src="/common-dist.js" defer> </script>
+    <script src="/js/lightbox.js" defer></script>
+    <script src="/front/common-dist.js" defer> </script>
   </head>
   <!-- range slider-->
   <!-- calendar input-->
   <!-- head end-->
+  <div class="preloader-popup">Loading...
+    <div class="preloader-container">
+      <div class="preloader"></div>
+    </div>
+  </div>
+    <div class="popup element-show" data-element="1">
+      <div class="popup-overlay popup-overlay-js"></div>
+      <div class="popup-container"> 
+        <div class="close-btn close-btn--popup close-js"></div> 
+        <div class="form-default">
+          <h3>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h3>
+          <div class="popup-hint">Оставьте заявку, и мы свяжемся с вами в ближайшее время</div>
+          <div class="form">
+            <div class="input-box">
+              <label>Ваше имя*</label>
+              <input class="input-decorate" type="text">
+            </div>
+            <div class="input-box">
+              <label>Номер телефона*</label>
+              <input class="input-decorate phone-mask-choise" type="text" id="phone" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
+            </div>
+            <div class="input-box">
+              <div class="checkbox agreement">
+                <label>Согласен (на) на обработку <a href="#">персональных данных </a>
+                  <input type="checkbox" checked><span></span>
+                </label>
+              </div>
+            </div>
+              <div class="form-btn-container col-12">
+                <input class="btn btn--blue" type="submit" value="отправить">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup element-show menu-hamburger" data-element="0">
+      <div class="popup-overlay popup-overlay-js"></div>
+      <div class="popup-container"> 
+        <div class="close-btn close-btn--popup close-js"></div>
+        <div class="menu-mobile">
+          <nav class="popup-nav">
+            <ul class="ln">
+              <li> <a href="#">Главная</a></li>
+              <li> <a href="#">Услуги</a></li>
+              <li> <a href="#">О компании<i></i></a>
+                <ul> 
+                  <li> <a href="#">О Нас</a></li>
+                  <li> <a href="#">Блог</a></li>
+                  <li> <a href="#">Отзывы</a></li>
+                </ul>
+              </li>
+              <li> <a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="search-main"> 
+            <input class="input-search" type="text" placeholder="Поиск">
+            <div class="search-ico"></div>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-footer-item menu-footer-item--phone"><a class="phone-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
+            <div class="menu-footer-item menu-footer-item--feedback"><a class="btn-header btn btn--blue element-btn" data-element="1" href="#">Перезвонить мне</a></div>
+            <div class="menu-footer-item social-default"><a class="whatsapp-btn" href=""> <i> </i><span>WhatsApp</span></a>
+                <div class="social"><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <body> </body>
 </html>
 <section>

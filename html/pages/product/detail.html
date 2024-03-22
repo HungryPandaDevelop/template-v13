@@ -15,12 +15,19 @@
     <script src="/js/jquery.mask.js" defer></script>
     <script src="/js/lightslider.js" defer></script>
     <script src="/js/lightbox.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?fced5e55-2779-4df7-8baf-39cc561448b5&amp;lang=ru_RU" defer></script>
+    <script src="/js/map.js" defer></script>
     <script src="/front/common-dist.js" defer> </script>
   </head>
   <!-- range slider-->
   <!-- calendar input-->
   <!-- head end-->
   <body> 
+    <div class="preloader-popup">Loading...
+      <div class="preloader-container">
+        <div class="preloader"></div>
+      </div>
+    </div>
       <div class="popup element-show" data-element="1">
         <div class="popup-overlay popup-overlay-js"></div>
         <div class="popup-container"> 
@@ -31,20 +38,24 @@
             <div class="form">
               <div class="input-box">
                 <label>Ваше имя*</label>
-                <input class="input-decorate" type="text">
+                  <input class="input-decorate require" type="text" placeholder="Text">
               </div>
               <div class="input-box">
                 <label>Номер телефона*</label>
-                <input class="input-decorate phone-mask-choise" type="text" id="phone" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
+                  <input class="input-decorate phone-mask require" type="text" placeholder="Phone">
               </div>
-              <div class="checkbox agreement">
-                <label>Согласен (на) на обработку <a href="#">персональных данных </a>
-                  <input type="checkbox" checked><span></span>
-                </label>
+              <div class="input-box">
+                  <div class="checkbox agreement">
+                    <label>Согласен (на) на обработку <a href="#">персональных данных </a>
+                      <input type="checkbox" checked><span></span>
+                    </label>
+                  </div>
               </div>
-                <div class="form-btn-container col-12">
-                  <input class="btn btn--blue" type="submit" value="отправить">
-                </div>
+              <div class="input-box">
+                  <div class="form-btn-container col-12">
+                    <input class="btn btn--blue" type="submit" value="отправить">
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -55,7 +66,7 @@
           <div class="close-btn close-btn--popup close-js"></div>
           <div class="menu-mobile">
             <nav class="popup-nav">
-              <ul class="ln">
+              <ul>
                 <li> <a href="#">Главная</a></li>
                 <li> <a href="#">Услуги</a></li>
                 <li> <a href="#">О компании<i></i></a>
@@ -75,7 +86,7 @@
             <div class="menu-footer">
               <div class="menu-footer-item menu-footer-item--phone"><a class="phone-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
               <div class="menu-footer-item menu-footer-item--feedback"><a class="btn-header btn btn--blue element-btn" data-element="1" href="#">Перезвонить мне</a></div>
-              <div class="menu-footer-item social-default"><a class="whatsapp-btn" href=""> <i> </i><span>WhatsApp</span></a>
+              <div class="menu-footer-item social-default">
                   <div class="social"><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
                   </div>
               </div>
@@ -153,591 +164,576 @@
           <div class="product-gallery-item img-cover"> <img src="/images/temp/5.jpg" alt=""></div>
         </div>
       </div>
+      <div class="product-detail-about main-grid">
+        <div class="col-3">
+          <div class="product-detail-price vertical-align"><span>1 850 AED/час</span></div>
+        </div>
+        <div class="col-5">
+          <div class="product-detail-adv">
+            <div class="product-adv-icons"> 
+              <div class="product-adv-img"><img src="/images/temp/adv//1.svg" alt=""></div><span>
+                 18,9 м.(62 ft.)</span>
+            </div>
+            <div class="product-adv-icons"> 
+              <div class="product-adv-img"><img src="/images/temp/adv/2.svg" alt=""></div><span>
+                 29 гостей </span>
+            </div>
+            <div class="product-adv-icons"> 
+              <div class="product-adv-img"><img src="/images/temp/adv/3.svg" alt=""></div><span>
+                 3 человека</span>
+            </div>
+            <div class="product-adv-icons"> 
+              <div class="product-adv-img"><img src="/images/temp/adv/4.svg" alt=""></div><span>
+                 3 каюты</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="product-detail-controls vertical-align">
+            <div class="btn-container"><a class="liked-btn" href="#"> </a><a class="btn btn--black-border" href="#">Забронировать </a><a class="btn btn--blue-border" href="#">Задать вопрос</a><a class="phone-btn" href="#"><i></i></a><a class="whatsapp-btn" href="#"><i></i></a></div>
+          </div>
+        </div>
+      </div>
+      <section class="tabs">
+          <div class="tabs tabs-choise">
+            <div class="main-full">
+              <div class="tabs-nav">
+                <ul class="ln">
+                  <li> Спецификация
+                  </li>
+                  <li> Описание
+                  </li>
+                  <li> Галерея
+                  </li>
+                </ul>
+                <div class="tabs-carriage"></div>
+              </div>
+            </div>
+            <div class="tabs-container tabs-choise main-full">
+              <div class="tabs-item active">
+                <div class="main-grid">
+                  <div class="col-3 col-xs-12">
+                      <div class="characteristic-item">
+                        <div>
+                          <div class="characteristic-item-img"><img src="/images/temp/adv/1.svg" alt=""></div>
+                        </div>
+                        <div class="characteristic-item-info">
+                          <div class="characteristic-item-container">
+                            <h3>Azimut, Италия
+                            </h3>
+                            <div class="characteristic-item-text">Azimut, Италия
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-3 col-xs-12">
+                      <div class="characteristic-item">
+                        <div>
+                          <div class="characteristic-item-img"><img src="/images/temp/adv/2.svg" alt=""></div>
+                        </div>
+                        <div class="characteristic-item-info">
+                          <div class="characteristic-item-container">
+                            <h3>Azimut, Италия
+                            </h3>
+                            <div class="characteristic-item-text">Azimut, Италия
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-3 col-xs-12">
+                      <div class="characteristic-item">
+                        <div>
+                          <div class="characteristic-item-img"><img src="/images/temp/adv/3.svg" alt=""></div>
+                        </div>
+                        <div class="characteristic-item-info">
+                          <div class="characteristic-item-container">
+                            <h3>Azimut, Италия
+                            </h3>
+                            <div class="characteristic-item-text">Azimut, Италия
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-3 col-xs-12">
+                      <div class="characteristic-item">
+                        <div>
+                          <div class="characteristic-item-img"><img src="/images/temp/adv/4.svg" alt=""></div>
+                        </div>
+                        <div class="characteristic-item-info">
+                          <div class="characteristic-item-container">
+                            <h3>Azimut, Италия
+                            </h3>
+                            <div class="characteristic-item-text">Azimut, Италия
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-item">
+                <div class="main-grid">
+                  <div class="col-6">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nisi debitis, sunt quae, non ab enim voluptas omnis perferendis provident assumenda quas dolore perspiciatis in. Error exercitationem sunt odio provident.</p><img src="/images/temp/1.jpg" alt="">
+                  </div>
+                  <div class="col-6"><img src="/images/temp/1.jpg" alt="">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nisi debitis, sunt quae, non ab enim voluptas omnis perferendis provident assumenda quas dolore perspiciatis in. Error exercitationem sunt odio provident.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs-item">
+                <div class="thumb-container">
+                  <div class="thumb-slider">
+                    <li class="default-slider-item" data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg"><img src="/images/temp/1.jpg" alt=""></li>
+                    <li class="default-slider-item" data-thumb="/images/temp/2.jpg" data-src="/images/temp/2.jpg"><img src="/images/temp/2.jpg" alt=""></li>
+                    <li class="default-slider-item" data-thumb="/images/temp/3.jpg" data-src="/images/temp/3.jpg"><img src="/images/temp/3.jpg" alt=""></li>
+                    <li class="default-slider-item" data-thumb="/images/temp/4.jpg" data-src="/images/temp/4.jpg"><img src="/images/temp/4.jpg" alt=""></li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+      <div class="section-stub"></div>
+      <section class="feedback-home">
+        <div class="main-grid">
+          <div class="col-12">
+            <h2>Заказать</h2>
+          </div>
+          <div class="col-12 form-default">
+            <div class="main-grid">
+              <div class="input-box col-6 col-xs-12"> 
+                <label>Ваше имя*</label>
+                  <input class="input-decorate require" type="text" placeholder="Text">
+              </div>
+              <div class="input-box col-6 col-xs-12">
+                <label>Номер телефона*</label>
+                  <input class="input-decorate phone-mask require" type="text" placeholder="Phone">
+              </div>
+              <div class="input-box col-6 col-xs-12"> 
+                <label>Номер WhatsApp</label>
+                  <input class="input-decorate undefined" type="text" placeholder="WhatsApp">
+              </div>
+              <div class="input-box date-input-container col-6 col-xs-12"> 
+                <label for="date">Дата и время</label>
+                  <div class="input-date-container">
+                    <input class="input-decorate input-date" type="text" readonly autocomplete="off"><i class="date-ico"></i>
+                  </div>
+              </div>
+              <div class="input-box col-12">
+                  <div class="checkbox agreement">
+                    <label>Согласен (на) на обработку <a href="#">персональных данных </a>
+                      <input type="checkbox" checked><span></span>
+                    </label>
+                  </div>
+              </div>
+              <div class="input-box col-12">
+                  <div class="form-btn-container col-12">
+                    <input class="btn btn--yellow" type="submit" value="забронировать услугу">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="slider-section">
+        <div class="main-full">
+          <div class="head-section">
+            <h2>Продукты</h2>
+            <div class="btn-container"><a class="btn btn--blue" href="#">Смотреть все </a></div>
+            <div class="arrow-stub"></div>
+          </div>
+        </div>
+        <div class="main-full">
+          <div class="multy-slider">
+              <div class="product-item">
+                <div class="product-item-img">
+                  <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
+                  <div class="product-item-liked"></div>
+                </div>
+                <div class="product-item-info"> 
+                  <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
+                  <ul class="ln product-item-description">
+                    <li><b>Описание:</b>
+                      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto hic voluptate repudiandae nam. Ut magni dolorum quod quidem esse corrupti id porro rem perspiciatis, placeat impedit non aspernatur incidunt illo!</div>
+                    </li>
+                  </ul>
+                  <div class="product-item-price">850 AED/час</div>
+                  <div class="product-item-adv">
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-1"></div><span>
+                         18,9 м.(62 ft.)</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-2"></div><span>
+                         29 ipsum </span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-3"></div><span>
+                         3 elit</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-4"></div><span>
+                         3 esse </span>
+                    </div>
+                  </div>
+                  <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="product-item-img">
+                  <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
+                  <div class="product-item-liked"></div>
+                </div>
+                <div class="product-item-info"> 
+                  <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
+                  <ul class="ln product-item-description">
+                    <li><b>Описание:</b>
+                      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto hic voluptate repudiandae nam. Ut magni dolorum quod quidem esse corrupti id porro rem perspiciatis, placeat impedit non aspernatur incidunt illo!</div>
+                    </li>
+                  </ul>
+                  <div class="product-item-price">850 AED/час</div>
+                  <div class="product-item-adv">
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-1"></div><span>
+                         18,9 м.(62 ft.)</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-2"></div><span>
+                         29 ipsum </span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-3"></div><span>
+                         3 elit</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-4"></div><span>
+                         3 esse </span>
+                    </div>
+                  </div>
+                  <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="product-item-img">
+                  <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
+                  <div class="product-item-liked"></div>
+                </div>
+                <div class="product-item-info"> 
+                  <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
+                  <ul class="ln product-item-description">
+                    <li><b>Описание:</b>
+                      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto hic voluptate repudiandae nam. Ut magni dolorum quod quidem esse corrupti id porro rem perspiciatis, placeat impedit non aspernatur incidunt illo!</div>
+                    </li>
+                  </ul>
+                  <div class="product-item-price">850 AED/час</div>
+                  <div class="product-item-adv">
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-1"></div><span>
+                         18,9 м.(62 ft.)</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-2"></div><span>
+                         29 ipsum </span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-3"></div><span>
+                         3 elit</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-4"></div><span>
+                         3 esse </span>
+                    </div>
+                  </div>
+                  <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="product-item-img">
+                  <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
+                  <div class="product-item-liked"></div>
+                </div>
+                <div class="product-item-info"> 
+                  <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
+                  <ul class="ln product-item-description">
+                    <li><b>Описание:</b>
+                      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto hic voluptate repudiandae nam. Ut magni dolorum quod quidem esse corrupti id porro rem perspiciatis, placeat impedit non aspernatur incidunt illo!</div>
+                    </li>
+                  </ul>
+                  <div class="product-item-price">850 AED/час</div>
+                  <div class="product-item-adv">
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-1"></div><span>
+                         18,9 м.(62 ft.)</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-2"></div><span>
+                         29 ipsum </span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-3"></div><span>
+                         3 elit</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-4"></div><span>
+                         3 esse </span>
+                    </div>
+                  </div>
+                  <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="product-item-img">
+                  <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
+                  <div class="product-item-liked"></div>
+                </div>
+                <div class="product-item-info"> 
+                  <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
+                  <ul class="ln product-item-description">
+                    <li><b>Описание:</b>
+                      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto hic voluptate repudiandae nam. Ut magni dolorum quod quidem esse corrupti id porro rem perspiciatis, placeat impedit non aspernatur incidunt illo!</div>
+                    </li>
+                  </ul>
+                  <div class="product-item-price">850 AED/час</div>
+                  <div class="product-item-adv">
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-1"></div><span>
+                         18,9 м.(62 ft.)</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-2"></div><span>
+                         29 ipsum </span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-3"></div><span>
+                         3 elit</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-4"></div><span>
+                         3 esse </span>
+                    </div>
+                  </div>
+                  <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="product-item-img">
+                  <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
+                  <div class="product-item-liked"></div>
+                </div>
+                <div class="product-item-info"> 
+                  <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
+                  <ul class="ln product-item-description">
+                    <li><b>Описание:</b>
+                      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto hic voluptate repudiandae nam. Ut magni dolorum quod quidem esse corrupti id porro rem perspiciatis, placeat impedit non aspernatur incidunt illo!</div>
+                    </li>
+                  </ul>
+                  <div class="product-item-price">850 AED/час</div>
+                  <div class="product-item-adv">
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-1"></div><span>
+                         18,9 м.(62 ft.)</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-2"></div><span>
+                         29 ipsum </span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-3"></div><span>
+                         3 elit</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-4"></div><span>
+                         3 esse </span>
+                    </div>
+                  </div>
+                  <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
+                </div>
+              </div>
+              <div class="product-item">
+                <div class="product-item-img">
+                  <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
+                  <div class="product-item-liked"></div>
+                </div>
+                <div class="product-item-info"> 
+                  <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
+                  <ul class="ln product-item-description">
+                    <li><b>Описание:</b>
+                      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto hic voluptate repudiandae nam. Ut magni dolorum quod quidem esse corrupti id porro rem perspiciatis, placeat impedit non aspernatur incidunt illo!</div>
+                    </li>
+                  </ul>
+                  <div class="product-item-price">850 AED/час</div>
+                  <div class="product-item-adv">
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-1"></div><span>
+                         18,9 м.(62 ft.)</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-2"></div><span>
+                         29 ipsum </span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-3"></div><span>
+                         3 elit</span>
+                    </div>
+                    <div class="product-adv-icons"> 
+                      <div class="product-adv-icon product-adv-icon-4"></div><span>
+                         3 esse </span>
+                    </div>
+                  </div>
+                  <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-stub"></div>
+      <section class="num">
+        <div class="main-full">
+          <h2>Наши яхты откроют вам мир роскоши, развлечений и незабываемого отдыха</h2>
+        </div>
+        <div class="main-grid">
+          <div class="col-3">
+            <div class="num-item"> <i>35+</i><span>Человек опытного персонала</span></div>
+          </div>
+          <div class="col-3">
+            <div class="num-item"> <i>500+</i><span>Довольных клиентов</span></div>
+          </div>
+          <div class="col-3">
+            <div class="num-item"> <i>15+</i><span>Яхт доступных для аренды</span></div>
+          </div>
+          <div class="col-3">
+            <div class="num-item"> <i>28+</i><span>Индивидуальных услуг</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="slider-section">
+        <div class="main-full">
+          <div class="head-section slider-section-head">
+            <h2 class="title-section">
+               Впечатления и отзывы</h2>
+            <div class="btn-container"><a class="btn btn--blue" href="#">Смотреть все статьи </a></div>
+            <div class="arrow-stub"></div>
+          </div>
+        </div>
+        <div class="main-full">
+          <div class="multy-slider">
+              <div class="reviews-item">
+                <div class="reviews-text">
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
+                <div class="reviews-info">
+                  <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
+                  <h2>Alex But</h2>
+                </div>
+              </div>
+              <div class="reviews-item">
+                <div class="reviews-text">
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
+                <div class="reviews-info">
+                  <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
+                  <h2>Alex But</h2>
+                </div>
+              </div>
+              <div class="reviews-item">
+                <div class="reviews-text">
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
+                <div class="reviews-info">
+                  <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
+                  <h2>Alex But</h2>
+                </div>
+              </div>
+              <div class="reviews-item">
+                <div class="reviews-text">
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
+                <div class="reviews-info">
+                  <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
+                  <h2>Alex But</h2>
+                </div>
+              </div>
+              <div class="reviews-item">
+                <div class="reviews-text">
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
+                <div class="reviews-info">
+                  <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
+                  <h2>Alex But</h2>
+                </div>
+              </div>
+              <div class="reviews-item">
+                <div class="reviews-text">
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
+                <div class="reviews-info">
+                  <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
+                  <h2>Alex But</h2>
+                </div>
+              </div>
+              <div class="reviews-item">
+                <div class="reviews-text">
+                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
+                <div class="reviews-info">
+                  <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
+                  <h2>Alex But</h2>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
     </div>
+    <!-- footer start -->
+    <div class="section-stub"></div>
+    <footer>
+      <div class="main-grid">
+        <div class="col-3 col-sm-6 col-xs-12 logo-container"><a class="logo" href="./index.html"><img src="/images/logo.jpg" alt=""></a>
+          <div class="logo-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, velit? Maxime autem iure nisi pariatur quasi harum! Ipsam amet dolore animi ea illo iste molestias error qui, natus, explicabo earum!</div>
+            <div class="search-container">
+              <div class="search">
+                <input class="search-input" type="text" placeholder="Поиск"><a class="search-loop" href="#"></a><i class="close-btn"></i>
+              </div>
+            </div>
+        </div>
+        <div class="col-3 hidden-sm hidden-xs">
+          <div class="nav">
+            <h3> <a href="#"> Title</a></h3>
+            <ul>
+              <li> <a href="#"> Link 1</a></li>
+              <li> <a href="#"> Link 2</a></li>
+              <li> <a href="#"> Link 3</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-3 hidden-sm hidden-xs">
+          <div class="nav nav-second">
+            <ul>
+              <li> <a href="#"> Блог</a></li>
+              <li> <a href="#"> O компании</a></li>
+              <li> <a href="#"> Отзывы</a></li>
+              <li> <a href="#"> Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-3 col-sm-6 col-xs-12 feedback">
+          <h3> <a href="#">Наши Контакты</a></h3>
+          <div class="feedback-footer-item"><a class="marker-btn" href="#"> <i></i><span>Dubai Harbour Marina</span></a></div>
+          <div class="feedback-footer-item"><a class="mail-btn" href="#"><i></i><span>mail@mail.ru</span></a></div>
+          <div class="feedback-footer-item"><a class="phone-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
+          <div class="feedback-footer-item"><a class="whatsapp-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
+          <div class="btn-container"> <a class="btn btn--blue btn-element element-btn" href="#" data-element="1"><span>перезвоните мне</span><i></i></a></div>
+          <div class="social-default">
+              <div class="social"><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
+              </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <ul class="footer-links">
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li>© 2022 HangryPandaDev</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
-<div class="product-detail-about main-grid">
-  <div class="col-3">
-    <div class="product-detail-price vertical-align"><span>1 850 AED/час</span></div>
-  </div>
-  <div class="col-5">
-    <div class="product-detail-adv">
-      <div class="product-adv-icons"> 
-        <div class="product-adv-img"><img src="/images/temp/adv//1.svg" alt=""></div><span>
-           18,9 м.(62 ft.)</span>
-      </div>
-      <div class="product-adv-icons"> 
-        <div class="product-adv-img"><img src="/images/temp/adv/2.svg" alt=""></div><span>
-           29 гостей </span>
-      </div>
-      <div class="product-adv-icons"> 
-        <div class="product-adv-img"><img src="/images/temp/adv/3.svg" alt=""></div><span>
-           3 человека</span>
-      </div>
-      <div class="product-adv-icons"> 
-        <div class="product-adv-img"><img src="/images/temp/adv/4.svg" alt=""></div><span>
-           3 каюты</span>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="product-detail-controls vertical-align">
-      <div class="btn-container"><a class="liked-btn" href="#"> </a><a class="btn btn--black-border" href="#">Забронировать </a><a class="btn btn--blue-border" href="#">Задать вопрос</a><a class="phone-btn" href="#"><i></i></a><a class="whatsapp-btn" href="#"><i></i></a></div>
-    </div>
-  </div>
-</div>
-<section class="tabs">
-    <div class="tabs tabs-choise">
-      <div class="main-full">
-        <div class="tabs-nav">
-          <ul class="ln">
-            <li> Спецификация
-            </li>
-            <li> Описание
-            </li>
-            <li> Галерея
-            </li>
-          </ul>
-          <div class="tabs-carriage"></div>
-        </div>
-      </div>
-      <div class="tabs-container tabs-choise main-full">
-        <div class="tabs-item active">
-          <div class="main-grid">
-            <div class="col-3">
-                  <div class="characteristic-item">
-                    <div>
-                      <div class="characteristic-item-img"><img src="/images/temp/adv/1.svg" alt=""></div>
-                    </div>
-                    <div class="characteristic-item-info">
-                      <div class="characteristic-item-container">
-                        <h3>Azimut, Италия
-                        </h3>
-                        <div class="characteristic-item-text">Azimut, Италия
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3">
-                  <div class="characteristic-item">
-                    <div>
-                      <div class="characteristic-item-img"><img src="/images/temp/adv/2.svg" alt=""></div>
-                    </div>
-                    <div class="characteristic-item-info">
-                      <div class="characteristic-item-container">
-                        <h3>Azimut, Италия
-                        </h3>
-                        <div class="characteristic-item-text">Azimut, Италия
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3">
-                  <div class="characteristic-item">
-                    <div>
-                      <div class="characteristic-item-img"><img src="/images/temp/adv/3.svg" alt=""></div>
-                    </div>
-                    <div class="characteristic-item-info">
-                      <div class="characteristic-item-container">
-                        <h3>Azimut, Италия
-                        </h3>
-                        <div class="characteristic-item-text">Azimut, Италия
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3">
-                  <div class="characteristic-item">
-                    <div>
-                      <div class="characteristic-item-img"><img src="/images/temp/adv/4.svg" alt=""></div>
-                    </div>
-                    <div class="characteristic-item-info">
-                      <div class="characteristic-item-container">
-                        <h3>Azimut, Италия
-                        </h3>
-                        <div class="characteristic-item-text">Azimut, Италия
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="tabs-item">
-          <div class="main-grid">
-            <div class="col-6">
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nisi debitis, sunt quae, non ab enim voluptas omnis perferendis provident assumenda quas dolore perspiciatis in. Error exercitationem sunt odio provident.</p><img src="/images/temp/1.jpg" alt="">
-            </div>
-            <div class="col-6"><img src="/images/temp/1.jpg" alt="">
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nisi debitis, sunt quae, non ab enim voluptas omnis perferendis provident assumenda quas dolore perspiciatis in. Error exercitationem sunt odio provident.</p>
-            </div>
-          </div>
-        </div>
-        <div class="tabs-item">
-          <div class="thumb-container">
-            <div class="thumb-slider">
-              <li class="default-slider-item" data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg"><img src="/images/temp/1.jpg" alt=""></li>
-              <li class="default-slider-item" data-thumb="/images/temp/2.jpg" data-src="/images/temp/2.jpg"><img src="/images/temp/2.jpg" alt=""></li>
-              <li class="default-slider-item" data-thumb="/images/temp/3.jpg" data-src="/images/temp/3.jpg"><img src="/images/temp/3.jpg" alt=""></li>
-              <li class="default-slider-item" data-thumb="/images/temp/4.jpg" data-src="/images/temp/4.jpg"><img src="/images/temp/4.jpg" alt=""></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-<div class="section-stub"></div>
-<section class="feedback-home feedback-origin">
-  <div class="main-grid">
-    <div class="col-12">
-      <h2>Заказать</h2>
-    </div>
-    <div class="col-12 form-default">
-      <div class="main-grid">
-        <div class="input-box col-6 col-xs-12"> 
-          <label class="label-animate" for="name">Ваше имя  </label>
-          <input class="input-decorate" type="text" id="name" autocomplete="off">
-        </div>
-        <div class="input-box col-6 col-xs-12">
-          <label class="label-animate">Ваш телефон</label>
-          <input class="phone-mask input-decorate" type="text" autocomplete="off">
-        </div>
-        <div class="input-box col-6 col-xs-12"> 
-          <label class="label-animate" for="WhatsApp">WhatsApp (если отличается от номера телефона)</label>
-          <input class="input-decorate" type="text" id="WhatsApp" autocomplete="off">
-        </div>
-        <div class="input-box date-input-container col-6 col-xs-12"> 
-          <label class="label-animate" for="date">Дата и время</label>
-          <input class="input-decorate input-date" type="text" autocomplete="off">
-        </div>
-        <div class="checkbox agreement col-12">
-          <label>Согласен (на) на обработку <a href="#">персональных данных </a>
-            <input type="checkbox" checked><span></span>
-          </label>
-        </div>
-          <div class="form-btn-container col-12">
-            <input class="btn btn--yellow" type="submit" value="забронировать услугу">
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="blog slider-section">
-  <div class="main-full">
-    <div class="head-section">
-      <h2>Продукты</h2>
-      <div class="btn-container"><a class="btn btn--blue" href="#">Смотреть все </a></div>
-      <div class="arrow-stub"></div>
-    </div>
-  </div>
-  <div class="main-full">
-    <div class="multy-slider">
-        <div class="product-item">
-          <div class="product-item-img">
-            <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
-            <div class="product-item-liked"></div>
-          </div>
-          <div class="product-item-info"> 
-            <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
-            <ul class="ln product-item-description">
-              <li><b>Назначение:</b>
-                <div>Круизы по Дубаю, вечеринки, рекреационная деятельность</div>
-              </li>
-              <li><b>Вервь:</b>
-                <div>Azimut, Италия</div>
-              </li>
-            </ul>
-            <div class="product-item-price">850 AED/час</div>
-            <div class="product-item-adv">
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-1"></div><span>
-                   18,9 м.(62 ft.)</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-2"></div><span>
-                   29 гостей </span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-3"></div><span>
-                   3 человека</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-4"></div><span>
-                   3 каюты</span>
-              </div>
-            </div>
-            <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
-          </div>
-        </div>
-        <div class="product-item">
-          <div class="product-item-img">
-            <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
-            <div class="product-item-liked"></div>
-          </div>
-          <div class="product-item-info"> 
-            <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
-            <ul class="ln product-item-description">
-              <li><b>Назначение:</b>
-                <div>Круизы по Дубаю, вечеринки, рекреационная деятельность</div>
-              </li>
-              <li><b>Вервь:</b>
-                <div>Azimut, Италия</div>
-              </li>
-            </ul>
-            <div class="product-item-price">850 AED/час</div>
-            <div class="product-item-adv">
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-1"></div><span>
-                   18,9 м.(62 ft.)</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-2"></div><span>
-                   29 гостей </span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-3"></div><span>
-                   3 человека</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-4"></div><span>
-                   3 каюты</span>
-              </div>
-            </div>
-            <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
-          </div>
-        </div>
-        <div class="product-item">
-          <div class="product-item-img">
-            <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
-            <div class="product-item-liked"></div>
-          </div>
-          <div class="product-item-info"> 
-            <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
-            <ul class="ln product-item-description">
-              <li><b>Назначение:</b>
-                <div>Круизы по Дубаю, вечеринки, рекреационная деятельность</div>
-              </li>
-              <li><b>Вервь:</b>
-                <div>Azimut, Италия</div>
-              </li>
-            </ul>
-            <div class="product-item-price">850 AED/час</div>
-            <div class="product-item-adv">
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-1"></div><span>
-                   18,9 м.(62 ft.)</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-2"></div><span>
-                   29 гостей </span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-3"></div><span>
-                   3 человека</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-4"></div><span>
-                   3 каюты</span>
-              </div>
-            </div>
-            <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
-          </div>
-        </div>
-        <div class="product-item">
-          <div class="product-item-img">
-            <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
-            <div class="product-item-liked"></div>
-          </div>
-          <div class="product-item-info"> 
-            <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
-            <ul class="ln product-item-description">
-              <li><b>Назначение:</b>
-                <div>Круизы по Дубаю, вечеринки, рекреационная деятельность</div>
-              </li>
-              <li><b>Вервь:</b>
-                <div>Azimut, Италия</div>
-              </li>
-            </ul>
-            <div class="product-item-price">850 AED/час</div>
-            <div class="product-item-adv">
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-1"></div><span>
-                   18,9 м.(62 ft.)</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-2"></div><span>
-                   29 гостей </span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-3"></div><span>
-                   3 человека</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-4"></div><span>
-                   3 каюты</span>
-              </div>
-            </div>
-            <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
-          </div>
-        </div>
-        <div class="product-item">
-          <div class="product-item-img">
-            <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
-            <div class="product-item-liked"></div>
-          </div>
-          <div class="product-item-info"> 
-            <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
-            <ul class="ln product-item-description">
-              <li><b>Назначение:</b>
-                <div>Круизы по Дубаю, вечеринки, рекреационная деятельность</div>
-              </li>
-              <li><b>Вервь:</b>
-                <div>Azimut, Италия</div>
-              </li>
-            </ul>
-            <div class="product-item-price">850 AED/час</div>
-            <div class="product-item-adv">
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-1"></div><span>
-                   18,9 м.(62 ft.)</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-2"></div><span>
-                   29 гостей </span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-3"></div><span>
-                   3 человека</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-4"></div><span>
-                   3 каюты</span>
-              </div>
-            </div>
-            <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
-          </div>
-        </div>
-        <div class="product-item">
-          <div class="product-item-img">
-            <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
-            <div class="product-item-liked"></div>
-          </div>
-          <div class="product-item-info"> 
-            <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
-            <ul class="ln product-item-description">
-              <li><b>Назначение:</b>
-                <div>Круизы по Дубаю, вечеринки, рекреационная деятельность</div>
-              </li>
-              <li><b>Вервь:</b>
-                <div>Azimut, Италия</div>
-              </li>
-            </ul>
-            <div class="product-item-price">850 AED/час</div>
-            <div class="product-item-adv">
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-1"></div><span>
-                   18,9 м.(62 ft.)</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-2"></div><span>
-                   29 гостей </span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-3"></div><span>
-                   3 человека</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-4"></div><span>
-                   3 каюты</span>
-              </div>
-            </div>
-            <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
-          </div>
-        </div>
-        <div class="product-item">
-          <div class="product-item-img">
-            <div class="product-item-cover img-cover"><img src="/images/temp/product/1.jpg" alt=""></div>
-            <div class="product-item-liked"></div>
-          </div>
-          <div class="product-item-info"> 
-            <h3><a href="#">Аренда Azimut 62 Lucky Star</a></h3>
-            <ul class="ln product-item-description">
-              <li><b>Назначение:</b>
-                <div>Круизы по Дубаю, вечеринки, рекреационная деятельность</div>
-              </li>
-              <li><b>Вервь:</b>
-                <div>Azimut, Италия</div>
-              </li>
-            </ul>
-            <div class="product-item-price">850 AED/час</div>
-            <div class="product-item-adv">
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-1"></div><span>
-                   18,9 м.(62 ft.)</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-2"></div><span>
-                   29 гостей </span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-3"></div><span>
-                   3 человека</span>
-              </div>
-              <div class="product-adv-icons"> 
-                <div class="product-adv-icon product-adv-icon-4"></div><span>
-                   3 каюты</span>
-              </div>
-            </div>
-            <div class="btn-product-container"><a class="btn btn--blue" href="#">Забронировать</a><a class="btn btn--blue-border" href="#">Подробнее</a></div>
-          </div>
-        </div>
-    </div>
-  </div>
-</section>
-<div class="section-stub"></div>
-<section class="num">
-  <div class="main-full">
-    <h2>Наши яхты откроют вам мир роскоши, развлечений и незабываемого отдыха</h2>
-  </div>
-  <div class="main-grid">
-    <div class="col-3">
-      <div class="num-item"> <i>35+</i><span>Человек опытного персонала</span></div>
-    </div>
-    <div class="col-3">
-      <div class="num-item"> <i>500+</i><span>Довольных клиентов</span></div>
-    </div>
-    <div class="col-3">
-      <div class="num-item"> <i>15+</i><span>Яхт доступных для аренды</span></div>
-    </div>
-    <div class="col-3">
-      <div class="num-item"> <i>28+</i><span>Индивидуальных услуг</span></div>
-    </div>
-  </div>
-</section>
-<section class="slider-section">
-  <div class="main-full">
-    <div class="head-section slider-section-head">
-      <h2 class="title-section">
-         Впечатления и отзывы</h2>
-      <div class="btn-container"><a class="btn btn--blue" href="#">Смотреть все статьи </a></div>
-      <div class="arrow-stub"></div>
-    </div>
-  </div>
-  <div class="main-full">
-    <div class="multy-slider">
-        <div class="reviews-item">
-          <div class="reviews-text">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
-          <div class="reviews-info">
-            <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
-            <h2>Alex But</h2>
-          </div>
-        </div>
-        <div class="reviews-item">
-          <div class="reviews-text">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
-          <div class="reviews-info">
-            <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
-            <h2>Alex But</h2>
-          </div>
-        </div>
-        <div class="reviews-item">
-          <div class="reviews-text">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
-          <div class="reviews-info">
-            <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
-            <h2>Alex But</h2>
-          </div>
-        </div>
-        <div class="reviews-item">
-          <div class="reviews-text">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
-          <div class="reviews-info">
-            <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
-            <h2>Alex But</h2>
-          </div>
-        </div>
-        <div class="reviews-item">
-          <div class="reviews-text">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
-          <div class="reviews-info">
-            <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
-            <h2>Alex But</h2>
-          </div>
-        </div>
-        <div class="reviews-item">
-          <div class="reviews-text">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
-          <div class="reviews-info">
-            <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
-            <h2>Alex But</h2>
-          </div>
-        </div>
-        <div class="reviews-item">
-          <div class="reviews-text">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime quod laboriosam consequatur voluptatibus ducimus quas, eius minima accusamus modi porro quidem illo architecto dolore nam unde laborum ipsum, placeat quasi!</div>
-          <div class="reviews-info">
-            <div class="reviews-img img-cover"><img src="/images/temp/avatar-1.jpg" alt=""></div>
-            <h2>Alex But</h2>
-          </div>
-        </div>
-    </div>
-  </div>
-</section>
-<!-- footer start -->
-<div class="section-stub"></div>
-<footer>
-  <div class="main-grid">
-    <div class="col-3 col-sm-6 col-xs-12 logo-container"><a class="logo" href="./index.html"><img src="/images/logo.jpg" alt=""></a>
-      <div class="logo-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, velit? Maxime autem iure nisi pariatur quasi harum! Ipsam amet dolore animi ea illo iste molestias error qui, natus, explicabo earum!</div>
-        <div class="search-container">
-          <div class="search">
-            <input class="search-input" type="text" placeholder="Поиск"><a href="#"></a><i class="close-btn"></i>
-          </div>
-        </div>
-    </div>
-    <div class="col-3 hidden-sm hidden-xs">
-      <div class="nav">
-        <h3> <a href="#"> Title</a></h3>
-        <ul>
-          <li> <a href="#"> Link 1</a></li>
-          <li> <a href="#"> Link 2</a></li>
-          <li> <a href="#"> Link 3</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-3 hidden-sm hidden-xs">
-      <div class="nav nav-second">
-        <ul>
-          <li> <a href="#"> Блог</a></li>
-          <li> <a href="#"> O компании</a></li>
-          <li> <a href="#"> Отзывы</a></li>
-          <li> <a href="#"> Контакты</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-3 col-sm-6 col-xs-12 feedback">
-      <h3> <a href="#">Наши Контакты</a></h3>
-      <div class="feedback-footer-item"><a class="marker-btn" href="#"> <i></i><span>Dubai Harbour Marina</span></a></div>
-      <div class="feedback-footer-item"><a class="mail-btn" href="#"><i></i><span>mail@mail.ru</span></a></div>
-      <div class="feedback-footer-item"><a class="phone-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
-      <div class="feedback-footer-item"><a class="whatsapp-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
-      <div class="btn-container"> <a class="btn btn--blue btn-element element-btn" href="#" data-element="1"><span>перезвоните мне</span><i></i></a></div>
-      <div class="social-default">
-          <div class="social"><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
-          </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <ul class="footer-links">
-        <li><a href="#">Карта сайта</a></li>
-        <li><a href="#">Политика конфиденциальности</a></li>
-        <li>© 2022 HangryPandaDev</li>
-      </ul>
-    </div>
-  </div>
-</footer>
 <!-- footer end    -->

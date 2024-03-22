@@ -15,12 +15,19 @@
     <script src="/js/jquery.mask.js" defer></script>
     <script src="/js/lightslider.js" defer></script>
     <script src="/js/lightbox.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?fced5e55-2779-4df7-8baf-39cc561448b5&amp;lang=ru_RU" defer></script>
+    <script src="/js/map.js" defer></script>
     <script src="/front/common-dist.js" defer> </script>
   </head>
   <!-- range slider-->
   <!-- calendar input-->
   <!-- head end-->
   <body> 
+    <div class="preloader-popup">Loading...
+      <div class="preloader-container">
+        <div class="preloader"></div>
+      </div>
+    </div>
       <div class="popup element-show" data-element="1">
         <div class="popup-overlay popup-overlay-js"></div>
         <div class="popup-container"> 
@@ -31,20 +38,24 @@
             <div class="form">
               <div class="input-box">
                 <label>Ваше имя*</label>
-                <input class="input-decorate" type="text">
+                  <input class="input-decorate require" type="text" placeholder="Text">
               </div>
               <div class="input-box">
                 <label>Номер телефона*</label>
-                <input class="input-decorate phone-mask-choise" type="text" id="phone" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57">
+                  <input class="input-decorate phone-mask require" type="text" placeholder="Phone">
               </div>
-              <div class="checkbox agreement">
-                <label>Согласен (на) на обработку <a href="#">персональных данных </a>
-                  <input type="checkbox" checked><span></span>
-                </label>
+              <div class="input-box">
+                  <div class="checkbox agreement">
+                    <label>Согласен (на) на обработку <a href="#">персональных данных </a>
+                      <input type="checkbox" checked><span></span>
+                    </label>
+                  </div>
               </div>
-                <div class="form-btn-container col-12">
-                  <input class="btn btn--blue" type="submit" value="отправить">
-                </div>
+              <div class="input-box">
+                  <div class="form-btn-container col-12">
+                    <input class="btn btn--blue" type="submit" value="отправить">
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -55,7 +66,7 @@
           <div class="close-btn close-btn--popup close-js"></div>
           <div class="menu-mobile">
             <nav class="popup-nav">
-              <ul class="ln">
+              <ul>
                 <li> <a href="#">Главная</a></li>
                 <li> <a href="#">Услуги</a></li>
                 <li> <a href="#">О компании<i></i></a>
@@ -75,7 +86,7 @@
             <div class="menu-footer">
               <div class="menu-footer-item menu-footer-item--phone"><a class="phone-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
               <div class="menu-footer-item menu-footer-item--feedback"><a class="btn-header btn btn--blue element-btn" data-element="1" href="#">Перезвонить мне</a></div>
-              <div class="menu-footer-item social-default"><a class="whatsapp-btn" href=""> <i> </i><span>WhatsApp</span></a>
+              <div class="menu-footer-item social-default">
                   <div class="social"><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
                   </div>
               </div>
@@ -177,13 +188,12 @@
       </div>
       <div class="main-full map">
         <div class="address-for-map">
-          <div class="contacts-address-line" id="address-0" data-coord-x="55.6" data-coord-y="37.6" data-index="0" data-address="+7 (499) 938-83-51" data-text-address="м. Китай-город, Лубянский пр., 15, стр. 4"></div>
+          <div class="contacts-address-line" data-coords="[55.6,37.6]" data-phone="+7 (499) 938-83-51" data-address="м. Китай-город, Лубянский пр., 15, стр. 4"></div>
+          <div class="contacts-address-line" data-coords="[56.6,38.6]" data-phone="+7 (499) 938-83-51" data-address="м. Китай-город, Лубянский пр., 15, стр. 4"></div>
         </div>
         <div class="map">
           <div id="map" data-marker="/images/icons/marker-black.svg"></div>
         </div>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;amp;apikey=AAyE0FsBAAAApZ_zfwIA_dXSEkWE4_EY3eJc0MxKY2DPitcAAAAAAAAAAADTxJqFLJMxqfrjbNVz6ghuLNJ4tw" type="text/javascript"></script>
-        <script src="/js/map.js"></script>
       </div>
     </div>
     <!-- footer start -->
@@ -193,7 +203,7 @@
           <div class="logo-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, velit? Maxime autem iure nisi pariatur quasi harum! Ipsam amet dolore animi ea illo iste molestias error qui, natus, explicabo earum!</div>
             <div class="search-container">
               <div class="search">
-                <input class="search-input" type="text" placeholder="Поиск"><a href="#"></a><i class="close-btn"></i>
+                <input class="search-input" type="text" placeholder="Поиск"><a class="search-loop" href="#"></a><i class="close-btn"></i>
               </div>
             </div>
         </div>

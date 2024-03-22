@@ -151,3 +151,19 @@ $icoOffset: 8px
 	@include icoBtn("../images/icons-app/mail-color.svg", "../images/icons-app/mail-color.svg")
 .phone-reg-btn
 	@include icoBtn("../images/icons-app/phone-color.svg", "../images/icons-app/phone-color.svg")
+
+.mouse-down-btn
+	width: 14px
+	height: 22px
+	border-radius: 30px
+	border: 2px solid $goldColor
+	display: flex
+	cursor: pointer
+	margin: 0 auto
+	.dot
+		margin: 2px auto 0
+		width: 4px
+		height: 4px
+		border-radius: 100%
+		background: $goldColor
+		animation: dotMove 2s ease-in-out forwards infinite

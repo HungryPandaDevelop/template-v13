@@ -21,12 +21,19 @@ include ../default/build-header
 				label Email
 				+inputEmail('Email')
 			.input-box
+				label Ваше сообщение
+				+inputTextarea('Message')
+			.input-box
+				label Date
+				+inputDate()
+			.input-box
 				label Checkbox
 				+inputCheckbox(['Опция 1', 'Опция 2'])  
 			.input-box
 				label Radio
 				+inputRadio(['Опция 1', 'Опция 2'], 'name')  
-
+			.input-box
+				+agreement()
 			.input-box
 				label File
 				+inputFile(0, 'Выбрать файл')   

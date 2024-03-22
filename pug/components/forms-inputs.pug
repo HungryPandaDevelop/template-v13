@@ -23,6 +23,17 @@ mixin inputCheckbox(options, className )
 				label= val 
 					input(type="checkbox")
 					span
+mixin inputDate() 
+	.input-date-container
+		input(type="text"  class='input-decorate input-date' readonly  autocomplete="off")
+		i.date-ico
+mixin agreement() 
+	.checkbox.agreement
+		label Согласен (на) на обработку 
+			a(href="#") персональных данных 
+			input(type="checkbox" checked)
+			span
+
 mixin inputRadio(options, name, className ) 
 	.checkbox-container
 		each val, index in options

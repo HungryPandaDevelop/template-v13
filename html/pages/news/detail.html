@@ -15,6 +15,8 @@
     <script src="/js/jquery.mask.js" defer></script>
     <script src="/js/lightslider.js" defer></script>
     <script src="/js/lightbox.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?fced5e55-2779-4df7-8baf-39cc561448b5&amp;lang=ru_RU" defer></script>
+    <script src="/js/map.js" defer></script>
     <script src="/front/common-dist.js" defer> </script>
   </head>
   <!-- range slider-->
@@ -103,10 +105,6 @@
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias sunt similique eveniet! Quos eius doloremque mollitia, id magnam error obcaecati iste sequi commodi enim rem illo. Modi, possimus itaque!</p>
           <div class="detail-links">
             <div class="tags"><a class="tag" href="#">News </a><a class="tag" href="#">Last </a><a class="tag" href="#">Custom </a></div>
-            <div class="social"> 
-                <div class="social"><a href="#"><img src="/images/social/vk-black.svg" alt=""><img class="ico-hover" src="/images/social/vk-white.svg" alt=""></a><a href="#"><img src="/images/social/youtube-black.svg" alt=""><img class="ico-hover" src="/images/social/youtube-white.svg" alt=""></a><a href="#"><img src="/images/social/google-black.svg" alt=""><img class="ico-hover" src="/images/social/google-white.svg" alt=""></a><a href="#"><img src="/images/social/telegram-black.svg" alt=""><img class="ico-hover" src="/images/social/telegram-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/whatsapp-black.svg" alt=""><img class="ico-hover" src="/images/social/whatsapp-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a>
-                </div>
-            </div>
           </div>
         </div>
       </div>
@@ -365,7 +363,7 @@
                   </div>
                   <div class="comments-grade"> <span>Оценка:</span><b>5</b></div>
                 </div>
-                <div class="comments-item-body">
+                <div class="comments-body">
                   <div class="comments-img img-cover"> <img src="/images/temp/avatar-1.jpg" alt=""></div>
                   <div class="comments-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit inventore voluptate nemo, temporibus earum, in, voluptatum ratione iste consequatur delectus vero? Adipisci nisi voluptates assumenda consequuntur cupiditate reiciendis dolore vitae?</div>
                 </div>
@@ -379,21 +377,25 @@
                   </div>
                   <div class="comments-grade"> <span>Оценка:</span><b>5</b></div>
                 </div>
-                <div class="comments-item-body">
+                <div class="comments-body">
                   <div class="comments-img img-cover"> <img src="/images/temp/avatar-1.jpg" alt=""></div>
                   <div class="comments-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit inventore voluptate nemo, temporibus earum, in, voluptatum ratione iste consequatur delectus vero? Adipisci nisi voluptates assumenda consequuntur cupiditate reiciendis dolore vitae?</div>
                 </div>
               </div>
+            <div class="comments-navigation">
+              <div class="prev-btn"><i> </i><span>Предыдущие комментарии</span></div>
+              <div class="next-btn"><i> </i><span>Следущие комментарии</span></div>
+            </div>
           </div>
           <div class="col-6 col-xs-12">
             <div class="comments-form-head">
               <h3>Оставьте свой отзыв</h3>
               <div class="comments-stars">
-                <div class="stars-ico active"></div>
-                <div class="stars-ico active"></div>
-                <div class="stars-ico"></div>
-                <div class="stars-ico"></div>
-                <div class="stars-ico"></div>
+                <div class="stars-ico active" data-index="1"></div>
+                <div class="stars-ico active" data-index="2"></div>
+                <div class="stars-ico" data-index="3"></div>
+                <div class="stars-ico" data-index="4"></div>
+                <div class="stars-ico" data-index="5"></div>
               </div>
             </div>
             <div class="comments-form">
@@ -419,7 +421,7 @@
           <div class="logo-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, velit? Maxime autem iure nisi pariatur quasi harum! Ipsam amet dolore animi ea illo iste molestias error qui, natus, explicabo earum!</div>
             <div class="search-container">
               <div class="search">
-                <input class="search-input" type="text" placeholder="Поиск"><a href="#"></a><i class="close-btn"></i>
+                <input class="search-input" type="text" placeholder="Поиск"><a class="search-loop" href="#"></a><i class="close-btn"></i>
               </div>
             </div>
         </div>

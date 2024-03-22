@@ -4,13 +4,20 @@ let mainSlider = $('.main-slider');
 
 mainSlider.lightSlider({
   item: 1,
-  loop: false,
+  loop: true,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   addClass: 'main-slider-container',
-  adaptiveHeight: true,
-
+  // adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        controls: false,
+      }
+    }
+  ]
 });
 
 let halfSlider = $('.half-slider');
@@ -208,7 +215,10 @@ lightbox.option({
 var longPhone = 16;
 $('.phone-mask').mask('+7(999)999-99-99');
 $('.phone-mask').on('keydown', function (e) {
-    if(!(e.which >= 48 && e.which <= 57 || e.which == 8) ){
+
+    // onkeypress = 'return event.charCode >= 48 && event.charCode <= 57'
+
+    if (!(e.which >= 48 && e.which <= 57 || e.which == 8)) {
         return false;
     }
 });
@@ -292,29 +302,36 @@ $('.phone-mask').on('keydown', function (e) {
 		});
 
 		// check require
-$('.wpcf7-form-control-wrap').each(function(){
+$('.wpcf7-form-control-wrap').each(function () {
   let sizeVal = $(this).find('.wpcf7-form-control').attr('id');
   $(this).addClass(sizeVal);
 });
 
 
-document.addEventListener( 'wpcf7mailsent', function( event ) {
+document.addEventListener('wpcf7mailsent', function (event) {
   console.log('mail sent OK');
   // Stuff
-  setTimeout(function(){
-    $('.element-show').removeClass('active');
-  },1500);
-  
-}, false ); 
+  setTimeout(function () {
+    $('.element-show').removeClass('show');
+    $('.wpcf7-form').attr('data-status', 'init');
+    $('.wpcf7-form').removeClass('sent invalid');
+    $('.wpcf7-form').addClass('init');
+    $('.wpcf7-form').reset();
+  }, 1500);
 
-// document.addEventListener( 'wpcf7invalid', function( event ) {
-  
-//   // Stuff
-//   setTimeout(function(){
-//     $('.wpcf7-form').addClass('init');
-//   },1500);
-  
-// }, false ); 
+}, false);
+
+document.addEventListener('wpcf7invalid', function (event) {
+
+  // Stuff
+  setTimeout(function () {
+    $('.wpcf7-form').attr('data-status', 'init');
+    $('.wpcf7-form').removeClass('sent invalid');
+    $('.wpcf7-form').addClass('init');
+    $('.wpcf7-form').addClass('init');
+  }, 1500);
+
+}, false); 
 // img cover start
 $('.img-cover').each(function(){
   let imgSrc = $(this).find('img').attr('src');
@@ -460,6 +477,108 @@ $('.custom-select').on('click', 'li', function () {
   parentsEl.find('span').text($(this).text());
 });
 // custom-select
+const ajaxSearch = (searchVal) => {
+
+
+  console.log("searchVal", searchVal)
+
+  $.ajax({
+    type: "GET",
+    url: "https://base.panda-dev.ru/wp-json/search/all",
+    data: { 'search': searchVal },
+    success: generateContent,
+    error: handleError
+  });
+}
+
+
+
+const handleError = (error) => {
+  console.error('Error occurred during AJAX request:', error);
+  // Add error handling logic here, such as displaying an error message to the user
+};
+
+
+const generateContent = (result) => {
+  mainBox.empty();
+  const { news, blog, product, services } = result;
+  appendContent(news, 'news', 'Новости');
+  appendContent(blog, 'blog', 'Блог');
+  appendContent(product, 'product', 'Продукты');
+  appendContent(services, 'services', 'Услуги');
+  mainBox.addClass('active');
+  if (isEmptyRes(result)) {
+    mainBox.append('<div class="empty-list">Список пуст</div>');
+  }
+}
+
+const appendContent = (items, link, title) => {
+  if (items.length > 0) {
+    const html = `
+      <div class="search-list-line">
+        <h3><a href="${link}">${title}</a></h3>
+        <ul class="ln">
+          ${items.map(item => `<li><a href="${item.link}">${item.title}</a></li>`).join('')}
+        </ul>
+      </div>`;
+    mainBox.append(html);
+  }
+}
+
+const isEmptyRes = (result) => {
+  return Object.values(result).every(items => items.length === 0);
+}
+
+
+
+let mainBox = $('.search-list');
+const spinner = $('.spinner');
+let mainSearch = $('.search');
+
+
+let searchTimeId;
+$('.search-input-ajax').on('keyup', function () {
+
+  let searchVal = $(this).val();
+
+  if (searchVal.length > 0) {
+
+    spinner.addClass('active');
+
+    clearTimeout(searchTimeId);
+    searchTimeId = setTimeout(() => {
+
+      ajaxSearch(searchVal);
+
+      spinner.removeClass('active');
+    }, 2000);
+  } else {
+    console.log("in empty")
+    mainBox.removeClass('active');
+  }
+});
+
+// Додавить крестик в каждой поиске
+$('.search-input').on('keyup', function () {
+  let $search = $(this).closest('.search');
+  let searchVal = $(this).val();
+
+  if (searchVal.length > 0) {
+    $search.addClass('search-on');
+  } else {
+    $search.removeClass('search-on');
+  };
+});
+// Додавить крестик в каждой поиске
+
+mainSearch.on('click', '.close-btn', function () {
+  let $search = $(this).closest('.search');
+  $search.removeClass('search-on').find('.search-input').val('');
+  mainBox.removeClass('active');
+  setTimeout(function () {
+    mainBox.empty();
+  }, 2000);
+});
 
 $('.close-js').on('click', function () {
     $(this).parents('.element-show').removeClass('show');
@@ -502,6 +621,10 @@ function changeStatePass(){
 
 }
 
+
+$(window).on('load', function () {
+  $('.preloader-popup').addClass('loaded');
+});
 
 
 var st = 0;
@@ -586,6 +709,18 @@ $('.sidebar-show-js').on('click', function () {
 $('.close-sidebar').on('click', function () {
   $('.catalog-sidebar').removeClass('active');
 });
+
+
+$('.mouse-down-btn-js').on('click', function () {
+  $('html, body').animate({ scrollTop: $('.main-home').height() + 'px' }, 'slow');
+});
+
+
+$('.tabs-sticky').on('click', 'li', function () {
+  let index = $(this).index() + 1;
+  console.log(index)
+  $('html, body').animate({ scrollTop: $('.tabs-point-' + index).offset().top - 130 + 'px' }, 'slow');
+});
 let detailTabs = $('.tabs');
 if(detailTabs.length > 0){
   const onHoverMoveCarriage = function(num){
@@ -623,5 +758,17 @@ if(detailTabs.length > 0){
   onHoverMoveCarriage(0);
 
 }
+let commetsStarBlock = $('.comments-stars');
+
+commetsStarBlock.on('click', '.stars-ico', function () {
+  // console.log('cl', $(this).index());
+
+  commetsStarBlock.find('.stars-ico').removeClass('active');
+  let numRating = $(this).data('index');
+
+  commetsStarBlock.find('.stars-ico').slice(0, numRating).addClass('active');
+  console.log(numRating, commetsStarBlock.find('.stars-ico').slice(0, numRating))
+  $(this).find('input').prop('checked', true);
+}); 
 });
 //# sourceMappingURL=common-dist.js.map
