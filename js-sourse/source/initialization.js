@@ -120,6 +120,8 @@ thumbSliderVericale.lightSlider({
   controls: false,
   // vThumbWidth:50,
   thumbItem: 4,
+
+
 });
 
 let longSlider = $('.long-slider');

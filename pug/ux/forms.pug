@@ -55,6 +55,13 @@ include ../default/build-header
 				label Select
 				+inputSelect('Выбрать селект', ['селект 1','селект 2','селект 3','селект 4','селект 5',])
 			.input-box
+				label Select
+				select.style-select( data-class="new-select")
+					option селект 1
+					option селект 2
+					option(selected) селект 3
+					option селект 4
+			.input-box
 				label DropZone
 				+dragdropZone(false, 3)
 			.input-box
