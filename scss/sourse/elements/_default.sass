@@ -8,15 +8,15 @@
   margin: 0 8px 15px 0
   text-decoration: none
   &:hover
-    background-color: $blackColor
-    color: $greenColor
+    background-color: $goldColor
+    color: $whiteColor
 .link
   font-weight: 700
   font-size: $standartSize
   color: $blueColor
   text-decoration: none
   &:hover
-    color: $grayColor
+    color: $goldColor
 
 .phone-ico
   @include icoEl(18px, 22px, '../images/icons/phone-black.svg')
@@ -41,19 +41,3 @@
 
 .user-ico
   @include icoEl(20px, 16px, '../images/icons/avatar-black.svg', text-top)
-
-@keyframes dotMove
-  0%
-    opacity: 0
-
-  30%
-    transform: translateY(0px)
-    opacity: 1
-
-  50%
-    transform: translateY(10px)
-    opacity: 0
-
-  100%
-    opacity: 0
-    transform: translateY(0px)

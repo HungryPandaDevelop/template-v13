@@ -1,40 +1,98 @@
 include ../default/build-header
 	section
 		.main-full
-			h2 Social
-			+social(["vg","yg","gg","tlg","ig","wzg","fcg",])
+			h2 Btn-icons
+			div 
+				a(href="#").close-btn
+				a(href="#").logout-btn
+				a(href="#").login-btn
+				a(href="#").wishlist-btn-counter
+					i 
+					span 0
+				a(href="#").hamburger-btn
+				a.sidebar-btn
+				a.tile-catalog-btn
+				a.line-catalog-btn
+				a.video-btn
+			div 
+				a(href="#").btn.phone-btn
+					i
+					span phone
+				a(href="#").btn.mail-btn
+					i 
+					span mail
+				a(href="#").btn.whatsapp-btn
+					i
+					span whatsapp
+				a(href="#").btn.marker-btn
+					i
+					span whatsapp
+				a(href="#").btn.edit-btn
+					i
+					span edit
+				a(href="#").btn.delete-btn
+					i
+					span delete
+				a(href="#").btn.add-btn
+					i
+					span add
+				a(href="#").btn.prev-btn
+					i
+					span prev
+				a(href="#").btn.next-btn
+					span next
+					i
+			div
+				.btn.btn-reg.google-reg-btn 
+					span google
+					i
+				.btn.btn-reg.vk-reg-btn 
+					span vk
+					i
+				.btn.btn-reg.mail-reg-btn 
+					span mail
+					i
+				.btn.btn-reg.phone-reg-btn 
+					span phone
+					i
+			div 
+				.mouse-down-btn
+					.dot
 	section
 		.main-full
+			h2 Social 
+			+social(["v","y","g","tl","i","wz","fc",])
+	section
+		.main-full 
 			h2 Default
 			a.tag(href="#") tag
 			a.link(href="#") link
 			i.phone-ico
 			i.mail-ico
 			i.marker-ico
+			i.user-ico
+			i.rewiews-ico
+			i.view-ico
+			i.time-ico
+			i.date-ico
+			i.marker-ico
+			i.mail-ico
+			
 	section
 		.main-full
 			h2 Btn
 			a.btn.btn--blue(href="#") Btn
 			a.btn.btn--blue-border(href="#") Btn
-	section
-		.main-full
-			h2 Btn-icons
-			a(href="#").close-btn
-			a(href="#").hamburger-btn
-			a(href="#").btn.phone-btn
-				i 
-				span phone
-			a(href="#").btn.whatsapp-btn
-				i
-				span whatsapp
-			a(href="#").btn.ico-in.ico-in--left
-				i
-					.back-ico
-						img(src="/images/icons/play-gray.svg", alt="")
-					.front-ico
-						img(src="/images/icons/play-black.svg", alt="")
-				span Play
+			a.btn.btn--black(href="#") Btn
+			a.btn.btn--black-border(href="#") Btn
+			a.btn.btn--gold(href="#") Btn
+			a.btn.btn--gold-border(href="#") Btn
 	section
 		.main-full
 			h2 Pagination
 			+pagination()
+	section
+		.main-full
+			h2 preloader
+			.preloader-container
+				.preloader

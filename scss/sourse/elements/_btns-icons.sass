@@ -1,25 +1,22 @@
-$icoSize: 24px
-$icoOffset: 8px
-
 .close-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/close-black.svg")
+	@include icoEl(24px, 24px, "../images/icons/close-black.svg")
 	cursor: pointer
 	&:hover
 		background-image: url("../images/icons/close-gray.svg")
 
 .logout-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/log-out-black.svg")
+	@include icoEl(24px, 24px, "../images/icons/log-out-black.svg")
 	cursor: pointer
 	&:hover
 		background-image: url("../images/icons/log-out-gray.svg")
 .login-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/log-in-black.svg")
+	@include icoEl(24px, 24px, "../images/icons/log-in-black.svg")
 	cursor: pointer
 	&:hover
 		background-image: url("../images/icons/log-in-gray.svg")
 
-.likes-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/like-fill-black.svg")
+.wishlist-btn-counter
+	@include icoEl(24px, 24px, "../images/icons/like-fill-black.svg")
 	cursor: pointer
 	position: relative
 	&:hover
@@ -33,11 +30,12 @@ $icoOffset: 8px
 		border-radius: 100%
 
 .hamburger-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/hamburger-black.svg", middle, contain, center right)
+	@include icoEl(24px, 24px, "../images/icons/hamburger-black.svg", middle, contain, center right)
 	cursor: pointer
 	&:hover
 		background-image: url("../images/icons/hamburger-gray.svg")
 
+$icoOffset: 8px
 @mixin icoBtn($ico, $icoHover)
 	border-color: $blackColor
 	cursor: pointer
@@ -48,63 +46,57 @@ $icoOffset: 8px
 	i
 		margin-left: $icoOffset
 		margin-right: $icoOffset
-		@include icoEl($icoSize, $icoSize, $ico)
+		@include icoEl(24px, 24px, $ico)
 	@if $icoHover
 		&:hover
-			color: $grayColor
+			color: $whiteColor
 			i
 				background-image: url($icoHover)
 
 .phone-btn
-	@include icoBtn("../images/icons/phone-black.svg", "../images/icons/phone-gray.svg")
+	@include icoBtn("../images/icons/phone-black.svg", "../images/icons/phone-white.svg")
 .mail-btn
-	@include icoBtn("../images/icons/mail-black.svg", "../images/icons/mail-gray.svg")
+	@include icoBtn("../images/icons/mail-black.svg", "../images/icons/mail-white.svg")
 .marker-btn
-	@include icoBtn("../images/icons/marker-black.svg", "../images/icons/marker-gray.svg")
+	@include icoBtn("../images/icons/marker-black.svg", "../images/icons/marker-white.svg")
 .whatsapp-btn
 	@include icoBtn("../images/social/whatsapp-black.svg", false)
 	border-color: $blackColor
 
 .edit-btn
-	@include icoBtn("../images/icons/edit-black.svg", "../images/icons/edit-gray.svg")
+	@include icoBtn("../images/icons/edit-black.svg", "../images/icons/edit-white.svg")
 	border-color: $blackColor
 
 .delete-btn
-	@include icoBtn("../images/icons/trash-black.svg", "../images/icons/trash-gray.svg")
+	@include icoBtn("../images/icons/trash-black.svg", "../images/icons/trash-white.svg")
 	border-color: $blackColor
 
-.delete-btn--circle
-	display: inline-block
-	border: 1px solid $grayColorSecond
-	padding: 5px
-	border-radius: 100%
-	i
-		margin: 0
 .add-btn
-	@include icoBtn("../images/icons/plus-black.svg", "../images/icons/plus-gray.svg")
+	@include icoBtn("../images/icons/plus-black.svg", "../images/icons/plus-white.svg")
 	border-color: $blackColor
-
+.prev-btn
+	@include icoBtn("../images/arrows/arrow-left-black.svg", "../images/arrows/arrow-left-white.svg")
+	i
+		margin-left: -13px
+.next-btn
+	@include icoBtn("../images/arrows/arrow-right-black.svg", "../images/arrows/arrow-right-white.svg")
+	i
+		margin-right: -13px
 .sidebar-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/sidebar-black.svg")
+	@include icoEl(24px, 24px, "../images/icons/sidebar-black.svg")
 	cursor: pointer
 	&:hover
 		background-image: url("../images/icons/sidebar-gray.svg")
 
-.prev-btn
-	@include icoBtn("../images/arrows/arrow-left-black.svg", "../images/arrows/arrow-left-gray.svg")
-
-.next-btn
-	@include icoBtn("../images/arrows/arrow-right-black.svg", "../images/arrows/arrow-right-gray.svg")
-
 .tile-catalog-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/tile-black.svg")
+	@include icoEl(24px, 24px, "../images/icons/tile-black.svg")
 	cursor: pointer
 	&:hover,
 	&.active
 		background-image: url("../images/icons/tile-gray.svg")
 
 .line-catalog-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/line-black.svg")
+	@include icoEl(24px, 24px, "../images/icons/line-black.svg")
 	cursor: pointer
 	&:hover,
 	&.active
@@ -167,3 +159,19 @@ $icoOffset: 8px
 		border-radius: 100%
 		background: $goldColor
 		animation: dotMove 2s ease-in-out forwards infinite
+
+@keyframes dotMove
+	0%
+		opacity: 0
+
+	30%
+		transform: translateY(0px)
+		opacity: 1
+
+	50%
+		transform: translateY(10px)
+		opacity: 0
+
+	100%
+		opacity: 0
+		transform: translateY(0px)

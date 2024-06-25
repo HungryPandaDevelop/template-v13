@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/ion.rangeSlider.css" type="text/css" rel="stylesheet">
     <link href="/css/lightslider.css" type="text/css" rel="stylesheet">
+    <link href="/css/lightbox.css" type="text/css" rel="stylesheet">
     <link href="/css/air-datepicker.css" type="text/css" rel="stylesheet">
-    <link href="/style.css" type="text/css" rel="stylesheet">
+    <link href="/front/theme-style.css" type="text/css" rel="stylesheet">
     <script src="/js/jquery-3.6.0.min.js" defer></script>
     <script src="/js/air-datepicker.js" defer></script>
     <script src="/js/ion.rangeSlider.js" defer></script>
     <script src="/js/jquery.mask.js" defer></script>
     <script src="/js/lightslider.js" defer></script>
-    <script src="/common-dist.js" defer> </script>
+    <script src="/js/lightbox.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?fced5e55-2779-4df7-8baf-39cc561448b5&amp;lang=ru_RU" defer></script>
+    <script src="/js/map.js" defer></script>
+    <script src="/front/common-dist.js" defer> </script>
   </head>
   <!-- range slider-->
   <!-- calendar input-->
@@ -21,26 +25,37 @@
   <body> 
     <section>
       <div class="main-full">
-        <h2>Social</h2>
-          <div class="social">
+        <h2>Btn-icons</h2>
+        <div> <a class="close-btn" href="#"></a><a class="logout-btn" href="#"></a><a class="login-btn" href="#"></a><a class="wishlist-btn-counter" href="#"><i> </i><span>0</span></a><a class="hamburger-btn" href="#"></a><a class="sidebar-btn"></a><a class="tile-catalog-btn"></a><a class="line-catalog-btn"></a><a class="video-btn"></a></div>
+        <div> <a class="btn phone-btn" href="#"><i></i><span>phone</span></a><a class="btn mail-btn" href="#"><i> </i><span>mail</span></a><a class="btn whatsapp-btn" href="#"><i></i><span>whatsapp</span></a><a class="btn marker-btn" href="#"><i></i><span>whatsapp</span></a><a class="btn edit-btn" href="#"><i></i><span>edit</span></a><a class="btn delete-btn" href="#"><i></i><span>delete</span></a><a class="btn add-btn" href="#"><i></i><span>add</span></a><a class="btn prev-btn" href="#"><i></i><span>prev</span></a><a class="btn next-btn" href="#"><span>next</span><i></i></a></div>
+        <div>
+          <div class="btn btn-reg google-reg-btn"> <span>google</span><i></i></div>
+          <div class="btn btn-reg vk-reg-btn"> <span>vk</span><i></i></div>
+          <div class="btn btn-reg mail-reg-btn"> <span>mail</span><i></i></div>
+          <div class="btn btn-reg phone-reg-btn"> <span>phone</span><i></i></div>
+        </div>
+        <div> 
+          <div class="mouse-down-btn">
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="main-full">
+        <h2>Social </h2>
+          <div class="social"><a href="#"><img src="/images/social/vk-black.svg" alt=""><img class="ico-hover" src="/images/social/vk-white.svg" alt=""></a><a href="#"><img src="/images/social/youtube-black.svg" alt=""><img class="ico-hover" src="/images/social/youtube-white.svg" alt=""></a><a href="#"><img src="/images/social/google-black.svg" alt=""><img class="ico-hover" src="/images/social/google-white.svg" alt=""></a><a href="#"><img src="/images/social/telegram-black.svg" alt=""><img class="ico-hover" src="/images/social/telegram-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/whatsapp-black.svg" alt=""><img class="ico-hover" src="/images/social/whatsapp-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a>
           </div>
       </div>
     </section>
     <section>
-      <div class="main-full">
-        <h2>Default</h2><a class="tag" href="#">tag</a><a class="link" href="#">link</a><i class="phone-ico"></i><i class="mail-ico"></i><i class="marker-ico"></i>
+      <div class="main-full"> 
+        <h2>Default</h2><a class="tag" href="#">tag</a><a class="link" href="#">link</a><i class="phone-ico"></i><i class="mail-ico"></i><i class="marker-ico"></i><i class="user-ico"></i><i class="rewiews-ico"></i><i class="view-ico"></i><i class="time-ico"></i><i class="date-ico"></i><i class="marker-ico"></i><i class="mail-ico"></i>
       </div>
     </section>
     <section>
       <div class="main-full">
-        <h2>Btn</h2><a class="btn btn--blue" href="#">Btn</a><a class="btn btn--blue-border" href="#">Btn</a>
-      </div>
-    </section>
-    <section>
-      <div class="main-full">
-        <h2>Btn-icons</h2><a class="close-btn" href="#"></a><a class="hamburger-btn" href="#"></a><a class="btn phone-btn" href="#"><i> </i><span>phone</span></a><a class="btn whatsapp-btn" href="#"><i></i><span>whatsapp</span></a><a class="btn ico-in ico-in--left" href="#"><i>
-            <div class="back-ico"><img src="/images/icons/play-gray.svg" alt=""></div>
-            <div class="front-ico"><img src="/images/icons/play-black.svg" alt=""></div></i><span>Play</span></a>
+        <h2>Btn</h2><a class="btn btn--blue" href="#">Btn</a><a class="btn btn--blue-border" href="#">Btn</a><a class="btn btn--black" href="#">Btn</a><a class="btn btn--black-border" href="#">Btn</a><a class="btn btn--gold" href="#">Btn</a><a class="btn btn--gold-border" href="#">Btn</a>
       </div>
     </section>
     <section>
@@ -49,6 +64,14 @@
           <!-- pagination-component start-->
           <div class="pagination"><a class="prev disabled" href="#">Назад</a><span class="selected">1</span><a href="#">2 </a><a href="#">3 </a><a class="pagination-dotted" href="#">...</a><a href="#">20</a><a class="next" href="#">Вперед</a></div>
           <!-- pagination-component start-->
+      </div>
+    </section>
+    <section>
+      <div class="main-full">
+        <h2>preloader</h2>
+        <div class="preloader-container">
+          <div class="preloader"></div>
+        </div>
       </div>
     </section>
   </body>
