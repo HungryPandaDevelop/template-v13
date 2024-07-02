@@ -1,4 +1,4 @@
-.menu-hamburger
+.popup-menu
 	.popup-container
 		background-color: $whiteColor
 		width: 50%
@@ -18,9 +18,11 @@
 		padding: 0
 		margin: 0
 		list-style: none
-	.social a
-		margin: 0 15px
-.menu-mobile
+	.social
+		margin-bottom: 15px
+		a
+			margin: 0 15px
+.popup-menu-container
 	display: flex
 	flex-direction: column
 	justify-content: space-between
@@ -30,14 +32,12 @@
 	li
 		margin-bottom: 15px
 		position: relative
-		border-top: 1px solid $grayColorSecond
 		i
 			@include bgImageEl("../images/arrows/carret-down-gray.svg", 24px)
 			@include positionElement(24px, 24px, 5px, 0, right, top, 2)
 
 		ul
 			background-color: $grayColorSecond
-			font-size: $smallSize
 			display: none
 			padding: 8px 0
 			li
@@ -68,7 +68,7 @@
 	margin: 15px 0
 
 @media (max-width: 576px)
-	.menu-hamburger
+	.popup-menu
 		.popup-container
 			width: 100%
 			margin: 0

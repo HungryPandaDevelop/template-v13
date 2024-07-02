@@ -74,14 +74,7 @@ $icoOffset: 8px
 .add-btn
 	@include icoBtn("../images/icons/plus-black.svg", "../images/icons/plus-white.svg")
 	border-color: $blackColor
-.prev-btn
-	@include icoBtn("../images/arrows/arrow-left-black.svg", "../images/arrows/arrow-left-white.svg")
-	i
-		margin-left: -13px
-.next-btn
-	@include icoBtn("../images/arrows/arrow-right-black.svg", "../images/arrows/arrow-right-white.svg")
-	i
-		margin-right: -13px
+
 .sidebar-btn
 	@include icoEl(24px, 24px, "../images/icons/sidebar-black.svg")
 	cursor: pointer
@@ -101,7 +94,44 @@ $icoOffset: 8px
 	&:hover,
 	&.active
 		background-image: url("../images/icons/line-gray.svg")
+/* next,prev-btn */
+.prev-btn,
+.next-btn
+	cursor: pointer
+	padding: 6px 13px
+	i,span
+		display: inline-block
+		vertical-align: middle
+	i
+		margin-left: 15px
+		margin-right: 15px
+	&:hover
+		color: $grayColor
 
+	&.btn
+		border-color: $blackColor
+
+.prev-btn
+	i
+		@include icoEl(24px, 24px, "../images/arrows/arrow-left-black.svg")
+	&.btn
+		i
+			margin-left: -15px
+		&:hover
+			color: $whiteColor
+			i
+				background-image: url("../images/arrows/arrow-left-white.svg")
+.next-btn
+	i
+		@include icoEl(24px, 24px, "../images/arrows/arrow-right-black.svg")
+	&.btn
+		i
+			margin-right: -15px
+		&:hover
+			color: $whiteColor
+			i
+				background-image: url("../images/arrows/arrow-right-white.svg")
+/* next,prev-btn */
 .video-btn
 	cursor: pointer
 	span

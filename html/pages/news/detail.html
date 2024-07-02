@@ -19,14 +19,83 @@
     <script src="/js/map.js" defer></script>
     <script src="/front/common-dist.js" defer> </script>
   </head>
-  <!-- range slider-->
-  <!-- calendar input-->
   <!-- head end-->
   <body> 
+    <div class="preloader-popup">Loading...
+      <div class="preloader-container">
+        <div class="preloader"></div>
+      </div>
+    </div>
+      <div class="popup element-show" data-element="1">
+        <div class="popup-overlay popup-overlay-js"></div>
+        <div class="popup-container"> 
+          <div class="close-btn close-btn--popup close-js"></div> 
+          <div class="form-default">
+            <h3>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</h3>
+            <div class="popup-hint">Оставьте заявку, и мы свяжемся с вами в ближайшее время</div>
+            <div class="form">
+              <div class="input-box">
+                <label>Ваше имя*</label>
+                  <input class="input-decorate require" type="text" placeholder="Text">
+              </div>
+              <div class="input-box">
+                <label>Номер телефона*</label>
+                  <input class="input-decorate phone-mask require" type="text" placeholder="Phone">
+              </div>
+              <div class="input-box">
+                  <div class="checkbox agreement">
+                    <label>Согласен (на) на обработку <a href="#">персональных данных </a>
+                      <input type="checkbox" checked><span></span>
+                    </label>
+                  </div>
+              </div>
+              <div class="input-box">
+                  <div class="form-btn-container col-12">
+                    <input class="btn btn--blue" type="submit" value="отправить">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup element-show popup-menu" data-element="0">
+        <div class="popup-overlay popup-overlay-js"></div>
+        <div class="popup-container"> 
+          <div class="close-btn close-btn--popup close-js"></div>
+          <div class="popup-menu-container">
+            <nav class="popup-nav">
+              <ul>
+                <li> <a href="#">Главная</a></li>
+                <li> <a href="#">Услуги</a></li>
+                <li> <a href="#">О компании<i></i></a>
+                  <ul> 
+                    <li> <a href="#">О Нас</a></li>
+                    <li> <a href="#">Блог</a></li>
+                    <li> <a href="#">Отзывы</a></li>
+                  </ul>
+                </li>
+                <li> <a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="search-main"> 
+              <input class="input-search" type="text" placeholder="Поиск">
+              <div class="search-ico"></div>
+            </div>
+            <div class="menu-footer">
+              <div class="menu-footer-item menu-footer-item--phone"><a class="btn phone-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
+              <div class="menu-footer-item menu-footer-item--feedback"><a class="btn btn--blue element-btn" data-element="1" href="#">Перезвонить мне</a></div>
+              <div class="menu-footer-item social-default">
+                  <div class="social"><a href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <header>
       <div class="main-grid">
-        <div class="col-1 col-sm-6 col-xs-6 logo-container vertical-align"><a class="logo" href="#"> <img src="/images/logo.jpg" alt=""></a></div>
-        <div class="col-5 col-xxl-4 col-md-5 col-sm-6 hidden-sm hidden-xs vertical-align">
+        <div class="col-1 col-md-6 col-sm-6 col-xs-6 logo-container vertical-align"><a class="logo" href="#"> <img src="/images/logo.jpg" alt=""></a></div>
+        <div class="col-5 col-xxl-4 col-md-5 col-sm-6 hidden-md hidden-sm hidden-xs vertical-align">
           <nav class="nav-header">
             <ul class="ln">
               <li> <a href="#">Главная</a></li>
@@ -43,13 +112,13 @@
           </nav>
         </div>
         <div class="col-6 col-xxl-7 col-md-6 col-sm-6 col-xs-6 vertical-align feedback-header">
-          <div class="hidden-sm hidden-xs"><a class="phone-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
+          <div class="hidden-sm hidden-xs"><a class="btn phone-btn" href="#"> <i></i><span>+ 7 985 282 65 32</span></a></div>
           <div class="hidden-xs"><a class="btn-header btn btn--blue element-btn hidden-md hidden-sm" data-element="1" href="#">Перезвонить мне</a></div>
-            <div class="social hidden-lg hidden-md hidden-sm hidden-xs"><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
+            <div class="social hidden-lg hidden-md hidden-sm hidden-xs"><a href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
             </div>
+          <div class="wishlist-btn-counter"><span>4</span></div>
           <div class="user-header hidden-xs">
             <div class="admin-panel">
-              <div class="likes-btn"><span>4</span></div>
               <div class="panel-img-container">
                 <div class="panel-img-account">
                   <div class="img-cover"> <img src="/images/temp/avatar-1.jpg" alt=""></div>
@@ -205,7 +274,7 @@
         <div class="main-full">
           <div class="head-section slider-section-head">
             <h2 class="title-section">Другие статьи</h2>
-            <div class="btn-container"> <a class="btn btn--blue" href="#">СМОТРЕТЬ ВСЕ</a></div>
+            <div class="btn-container"> <a class="btn btn--blue" href="#">Все статьи</a></div>
             <div class="arrow-stub"></div>
           </div>
         </div>
@@ -282,7 +351,7 @@
           <div class="head-section slider-section-head">
             <h2 class="title-section">
                Впечатления и отзывы</h2>
-            <div class="btn-container"><a class="btn btn--blue" href="#">Смотреть все статьи </a></div>
+            <div class="btn-container"><a class="btn btn--blue" href="#">Все отзывы</a></div>
             <div class="arrow-stub"></div>
           </div>
         </div>
@@ -352,7 +421,7 @@
           <h2>Комментарии</h2>
         </div>
         <div class="main-grid">
-          <div class="col-6 col-xs-12">
+          <div class="col-6 col-md-12 col-xs-12">
             <h3>Спискок комментариев</h3>
               <div class="comments-item">
                 <div class="comments-head">
@@ -384,10 +453,10 @@
               </div>
             <div class="comments-navigation">
               <div class="prev-btn"><i> </i><span>Предыдущие комментарии</span></div>
-              <div class="next-btn"><i> </i><span>Следущие комментарии</span></div>
+              <div class="next-btn"><span>Следущие комментарии</span><i></i></div>
             </div>
           </div>
-          <div class="col-6 col-xs-12">
+          <div class="col-6 col-md-12 col-xs-12">
             <div class="comments-form-head">
               <h3>Оставьте свой отзыв</h3>
               <div class="comments-stars">
@@ -405,7 +474,7 @@
                 </div>
                 <div class="input-box">
                     <div class="form-btn-container">
-                      <input class="btn btn--orange" type="submit" value="Оставить отзыв">
+                      <input class="btn btn--gold" type="submit" value="Оставить отзыв">
                     </div>
                 </div>
               </form>
@@ -453,7 +522,7 @@
           <div class="feedback-footer-item"><a class="whatsapp-btn" href="#"> <i></i><span>+ 971 56 115 16 24</span></a></div>
           <div class="btn-container"> <a class="btn btn--blue btn-element element-btn" href="#" data-element="1"><span>перезвоните мне</span><i></i></a></div>
           <div class="social-default">
-              <div class="social"><a class="social-ico--white" href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a class="social-ico--white" href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
+              <div class="social"><a href="#"><img src="/images/social/facebook-black.svg" alt=""><img class="ico-hover" src="/images/social/facebook-white.svg" alt=""></a><a href="#"><img src="/images/social/instagram-black.svg" alt=""><img class="ico-hover" src="/images/social/instagram-white.svg" alt=""></a>
               </div>
           </div>
         </div>

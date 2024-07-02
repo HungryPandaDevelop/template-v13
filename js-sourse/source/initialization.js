@@ -6,6 +6,7 @@ mainSlider.lightSlider({
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
+  slideMargin: 0,
   addClass: 'main-slider-container',
   // adaptiveHeight: true,
   responsive: [

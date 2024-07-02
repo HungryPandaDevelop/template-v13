@@ -2,7 +2,7 @@ section.comments-section
   .main-full.head-section
     h2 Комментарии
   .main-grid
-    .col-6.col-xs-12
+    .col-6.col-md-12.col-xs-12
       h3 Спискок комментариев
       +commentsItem('ALex')
       +commentsItem('Dave')
@@ -11,9 +11,9 @@ section.comments-section
           i 
           span Предыдущие комментарии
         .next-btn
-          i 
           span Следущие комментарии
-    .col-6.col-xs-12
+          i
+    .col-6.col-md-12.col-xs-12
       .comments-form-head
         h3 Оставьте свой отзыв
         .comments-stars
@@ -27,4 +27,4 @@ section.comments-section
           .input-box
             +inputTextarea('Ваше сообщение')
           .input-box
-            +inputSubmit('Оставить отзыв', 'btn--orange') 
+            +inputSubmit('Оставить отзыв', 'btn--gold') 

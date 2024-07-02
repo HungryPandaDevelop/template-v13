@@ -9,14 +9,14 @@ include ../default/build-header
 				label Text 
 				+inputText('Text','require')
 			.input-box.input-animate
-				+inputText('Text animate')
-				label Text animate
+				input(type="text" id="textId" placeholder="text" class='input-decorate')
+				label(for='textId') Text animate
 			.input-box
 				label Phone
 				+inputPhone('Phone', 'require')
 			.input-box.input-animate
-				+inputPhone('Phone')
-				label Phone
+				input(type="text" id="phoneId" placeholder="text" class='input-decorate phone-mask')
+				label(for='phoneId') Phone
 			.input-box
 				label Email
 				+inputEmail('Email')
