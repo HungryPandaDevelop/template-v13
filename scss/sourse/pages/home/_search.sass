@@ -2,6 +2,7 @@
   padding: 60px 0 150px
   background-color: $blueColor
   overflow: visible
+
   .img-cover
     opacity: 0.5
   h2
@@ -9,3 +10,10 @@
     position: relative
     color: $whiteColor
     margin: 0 0 30px
+  .preloader-container
+    @include positionElement(60px, 100%,0,0)
+    opacity: 0
+    &.active
+      opacity: 1
+  .search-input-ajax
+    padding-left: 60px

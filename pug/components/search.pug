@@ -1,9 +1,10 @@
 mixin search(ajax)
 	.search-container
 		.search
-			input(type="text" placeholder="Поиск" class=(ajax === 'ajax' ? " search-input-ajax" : "")).search-input
+			.preloader-container
+				.preloader
+			input(type="text" placeholder="Поиск" class=(ajax === 'ajax' ? "search-input-ajax" : "")).search-input
 			a.search-loop(href="#")
 			i.close-btn
 			if ajax === 'ajax'
 				.search-list
-				+spinner()

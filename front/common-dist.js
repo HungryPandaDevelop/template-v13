@@ -481,9 +481,6 @@ $(document).on('click', '.custom-select li', function () {
 // custom-select
 const ajaxSearch = (searchVal) => {
 
-
-  console.log("searchVal", searchVal)
-
   $.ajax({
     type: "GET",
     url: "https://base.panda-dev.ru/wp-json/search/all",
@@ -534,12 +531,16 @@ const isEmptyRes = (result) => {
 
 
 let mainBox = $('.search-list');
-const spinner = $('.spinner');
+
+const spinner = $('.preloader-container');
+
 let mainSearch = $('.search');
 
 
 let searchTimeId;
-$('.search-input-ajax').on('keyup', function () {
+let inputAjax = $('.search-input-ajax');
+
+inputAjax.on('keyup', function () {
 
   let searchVal = $(this).val();
 
@@ -556,7 +557,9 @@ $('.search-input-ajax').on('keyup', function () {
     }, 2000);
   } else {
     console.log("in empty")
+
     mainBox.removeClass('active');
+    mainBox.empty();
   }
 });
 
@@ -567,19 +570,32 @@ $('.search-input').on('keyup', function () {
 
   if (searchVal.length > 0) {
     $search.addClass('search-on');
+
   } else {
+    // mainBox.empty();
     $search.removeClass('search-on');
+
   };
 });
+
+
+$('.search-input').on('blur', function () {
+
+  let $search = $(this).closest('.search');
+  $search.removeClass('search-on');
+  mainBox.removeClass('active');
+})
+
 // Додавить крестик в каждой поиске
 
 mainSearch.on('click', '.close-btn', function () {
   let $search = $(this).closest('.search');
-  $search.removeClass('search-on').find('.search-input').val('');
+  $search.removeClass('search-on');
   mainBox.removeClass('active');
+  inputAjax.val('123');
   setTimeout(function () {
     mainBox.empty();
-  }, 2000);
+  }, 1000);
 });
 
 $('.close-js').on('click', function () {

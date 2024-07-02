@@ -1268,7 +1268,8 @@ section {
   top: 50%;
   -webkit-transform: translateX(0%) translateY(0%) translateZ(0);
           transform: translateX(0%) translateY(0%) translateZ(0);
-  margin-left: -30px;
+  margin-left: -15px;
+  margin-top: -15px;
 }
 .preloader:before {
   width: 50%;
@@ -4890,6 +4891,20 @@ footer .feedback {
   position: relative;
   color: #ffffff;
   margin: 0 0 30px;
+}
+.search-section .preloader-container {
+  width: 60px;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.search-section .preloader-container.active {
+  opacity: 1;
+}
+.search-section .search-input-ajax {
+  padding-left: 60px;
 }
 
 .team-item {
