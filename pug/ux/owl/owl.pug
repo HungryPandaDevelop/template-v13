@@ -1,0 +1,29 @@
+include ../../default/build-header
+link(rel="stylesheet", href="css/style.css")
+link(rel="stylesheet", href="css/owl.carousel.css")
+script(src="js/owl.carousel.js")
+script(src="js/owl.carousel2.thumbs.js")
+script(src="js/common.js") 
+
+.main-full
+	| header
+	h1 OWL  
+	.owl-default-container
+		.owl-carousel.owl-slider.owl-default(data-slider-id="1")
+			.item-img
+				.img-cover
+					img(src="/images/temp/1.jpg", alt="")
+			.item-img
+				.img-cover
+					img(src="/images/temp/2.jpg", alt="")
+			.item-img
+				.img-cover
+					img(src="/images/temp/3.jpg", alt="")
+			.item-img
+				.img-cover
+					img(src="/images/temp/4.jpg", alt="")
+		.owl-thumbs(data-slider-id="1")
+			button 1
+			button 2
+			button 3
+			button 4
